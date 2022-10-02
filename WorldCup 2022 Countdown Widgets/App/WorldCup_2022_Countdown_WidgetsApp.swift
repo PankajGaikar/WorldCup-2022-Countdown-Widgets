@@ -11,7 +11,7 @@ import SwiftUI
 struct WorldCup_2022_Countdown_WidgetsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootContainerView()
         }
     }
 }
