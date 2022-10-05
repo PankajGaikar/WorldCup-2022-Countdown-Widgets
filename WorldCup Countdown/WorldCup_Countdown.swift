@@ -44,7 +44,9 @@ struct WorldCup_CountdownEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        Image("WorldCup_1024")
+            .resizable()
+            .scaledToFill()
     }
 }
 
