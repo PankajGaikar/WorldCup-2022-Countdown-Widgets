@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C70D84928EF56CB0091BD3C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6C70D84828EF56CB0091BD3C /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		6C70D84B28EF575B0091BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */; };
 		6CFA736C28E9A4D300F9AF7B /* WorldCup_2022_Countdown_WidgetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA736B28E9A4D300F9AF7B /* WorldCup_2022_Countdown_WidgetsApp.swift */; };
 		6CFA736E28E9A4D300F9AF7B /* RootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA736D28E9A4D300F9AF7B /* RootContainerView.swift */; };
 		6CFA737028E9A4D400F9AF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CFA736F28E9A4D400F9AF7B /* Assets.xcassets */; };
@@ -64,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CFA736828E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WorldCup 2022 Countdown Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CFA736B28E9A4D300F9AF7B /* WorldCup_2022_Countdown_WidgetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCup_2022_Countdown_WidgetsApp.swift; sourceTree = "<group>"; };
 		6CFA736D28E9A4D300F9AF7B /* RootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerView.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C70D84928EF56CB0091BD3C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 		6CFA736A28E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */,
 				6CFA739828E9BBE000F9AF7B /* Storage */,
 				6CFA73B628EE274200F9AF7B /* Models */,
 				6CFA739728E9BBD800F9AF7B /* ViewModel */,
@@ -256,6 +261,9 @@
 				6CFA73AD28E9BC5300F9AF7B /* PBXTargetDependency */,
 			);
 			name = "WorldCup 2022 Countdown Widgets";
+			packageProductDependencies = (
+				6C70D84828EF56CB0091BD3C /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = "WorldCup 2022 Countdown Widgets";
 			productReference = 6CFA736828E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets.app */;
 			productType = "com.apple.product-type.application";
@@ -348,6 +356,9 @@
 				Base,
 			);
 			mainGroup = 6CFA735F28E9A4D300F9AF7B;
+			packageReferences = (
+				6C70D84728EF56CB0091BD3C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 6CFA736928E9A4D300F9AF7B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +378,7 @@
 			files = (
 				6CFA737328E9A4D400F9AF7B /* Preview Assets.xcassets in Resources */,
 				6CFA737028E9A4D400F9AF7B /* Assets.xcassets in Resources */,
+				6C70D84B28EF575B0091BD3C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +592,7 @@
 				DEVELOPMENT_TEAM = A3H2F8CC68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -610,6 +623,7 @@
 				DEVELOPMENT_TEAM = A3H2F8CC68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -807,6 +821,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C70D84728EF56CB0091BD3C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C70D84828EF56CB0091BD3C /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C70D84728EF56CB0091BD3C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6CFA736028E9A4D300F9AF7B /* Project object */;
 }
