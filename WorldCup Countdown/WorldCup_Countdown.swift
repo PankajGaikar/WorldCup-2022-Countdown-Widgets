@@ -44,9 +44,25 @@ struct WorldCup_CountdownEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Image("WorldCup_1024")
-            .resizable()
-            .scaledToFill()
+        ZStack(alignment: .bottomLeading) {
+            Image("WorldCup_1024")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background(Image("WorldCup_1024").resizable().scaledToFill())
+
+            ZStack {
+                Text("27 Days to go")
+                    .font(.title)
+                    .bold()
+                    .minimumScaleFactor(0.2)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity)
+                    .padding(5)
+                    .foregroundColor(.white)
+            }
+            .background(Color.black.opacity(0.4))
+        }
     }
 }
 
