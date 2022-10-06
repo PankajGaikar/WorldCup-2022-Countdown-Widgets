@@ -12,6 +12,7 @@ class WorldCupViewModel: NSObject, ObservableObject {
     var nowDate: Date
     let referenceDate: Date
     @Published var timeToWorldCup: DateComponents?
+    let playerNames = ["bale", "davies", "debruyne", "eriksen_prem", "griezmann_prem", "hakimi", "hakimi_prem", "hernandez_prem", "honda_prem", "kane_prem", "khazri_prem", "kimmich", "kroose_germany_prem", "lewandowski", "lewandowski_poland_prem", "mane_prem", "matic_prem", "messi_prem", "modric", "modric_prem", "pedri", "pulisic", "ronaldo_prem", "ruiz_prem", "sahlawi_prem", "sardar", "son_prem", "suarez_prem", "xhaka_prem"]
     
     var timer: Timer {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
