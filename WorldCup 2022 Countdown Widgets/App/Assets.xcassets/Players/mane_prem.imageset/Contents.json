@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "mane_prem.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
