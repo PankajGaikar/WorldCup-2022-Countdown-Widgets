@@ -7,36 +7,36 @@
 
 import Foundation
 
-enum Country {
+enum Country: CaseIterable {
+    case Argentina
+    case Brazil
     case England
+    case France
+    case Germany
+    case Netherlands
+    case Portugal
+    case Spain
     case Iran
     case USA
     case Wales
     case Qatar
     case Ecuador
     case Senegal
-    case Netherlands
-    case Argentina
     case SaudiArabia
     case Mexico
     case Poland
-    case France
     case Australia
     case Denmark
     case Tunisia
-    case Spain
     case CostaRica
-    case Germany
     case Japan
     case Belgium
     case Canada
     case Morocco
     case Croatia
-    case Brazil
     case Serbia
     case Switzerland
     case Cameroon
-    case Portugal
     case Ghana
     case Uruguay
     case KoreaRepublic
@@ -176,6 +176,75 @@ enum Country {
             return "UY"
         case .KoreaRepublic:
             return "KR"
+        }
+    }
+
+    func getImageName() -> String {
+        switch self {
+        case .England:
+            return "eng"
+        case .Iran:
+            return "irn"
+        case .USA:
+            return "usa"
+        case .Wales:
+            return "wal"
+        case .Qatar:
+            return "qat"
+        case .Ecuador:
+            return "ecu"
+        case .Senegal:
+            return "sen"
+        case .Netherlands:
+            return "ned"
+        case .Argentina:
+            return "arg"
+        case .SaudiArabia:
+            return "ksa"
+        case .Mexico:
+            return "mex"
+        case .Poland:
+            return "pol"
+        case .France:
+            return "fra"
+        case .Australia:
+            return "aus"
+        case .Denmark:
+            return "den"
+        case .Tunisia:
+            return "tun"
+        case .Spain:
+            return "esp"
+        case .CostaRica:
+            return "crc"
+        case .Germany:
+            return "ger"
+        case .Japan:
+            return "jpn"
+        case .Belgium:
+            return "bel"
+        case .Canada:
+            return "can"
+        case .Morocco:
+            return "mar"
+        case .Croatia:
+            return "cro"
+        case .Brazil:
+            return "bra"
+        case .Serbia:
+            return "srb"
+        case .Switzerland:
+            return "sui"
+        case .Cameroon:
+            return "cmr"
+        case .Portugal:
+            return "por"
+        case .Ghana:
+            return "gha"
+        case .Uruguay:
+            return "uru"
+        case .KoreaRepublic:
+            return "kor"
         }
     }
 }

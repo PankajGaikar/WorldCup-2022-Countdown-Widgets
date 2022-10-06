@@ -60,7 +60,7 @@ struct WorldCup_CountdownEntryView : View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
 
-                    Text(getTimeToWorldCup())
+                    Text(WorldCupViewModel().getTimeToWorldCup())
                         .font(.title)
                         .bold()
                         .minimumScaleFactor(0.2)
@@ -72,16 +72,6 @@ struct WorldCup_CountdownEntryView : View {
             }
             .background(Color.black.opacity(0.4))
         }
-    }
-
-    func getTimeToWorldCup() -> String {
-        let calendar = Calendar(identifier: .gregorian)
-        let components = calendar
-            .dateComponents([.day, .hour, .minute, .second],
-                            from: Date(),
-                            to: WorldCupViewModel.getDate()!)
-
-        return "\(components.day ?? -1)d \(components.hour ?? -1)h"
     }
 }
 
