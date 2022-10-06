@@ -49,5 +49,14 @@ class WorldCupViewModel: NSObject, ObservableObject {
 //                      components.second ?? 00)
     }
 
+    func getTimeToWorldCup() -> String {
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar
+            .dateComponents([.day, .hour, .minute, .second],
+                            from: Date(),
+                            to: WorldCupViewModel.getDate()!)
+
+        return "\(components.day ?? -1)d \(components.hour ?? -1)h"
+    }
 
 }
