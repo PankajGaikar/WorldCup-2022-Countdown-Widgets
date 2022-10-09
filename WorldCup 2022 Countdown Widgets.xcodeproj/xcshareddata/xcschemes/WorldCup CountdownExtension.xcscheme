@@ -43,6 +43,28 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6CFA738128E9A4D500F9AF7B"
+               BuildableName = "WorldCup 2022 Countdown WidgetsUITests.xctest"
+               BlueprintName = "WorldCup 2022 Countdown WidgetsUITests"
+               ReferencedContainer = "container:WorldCup 2022 Countdown Widgets.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6CFA737728E9A4D500F9AF7B"
+               BuildableName = "WorldCup 2022 Countdown WidgetsTests.xctest"
+               BlueprintName = "WorldCup 2022 Countdown WidgetsTests"
+               ReferencedContainer = "container:WorldCup 2022 Countdown Widgets.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
