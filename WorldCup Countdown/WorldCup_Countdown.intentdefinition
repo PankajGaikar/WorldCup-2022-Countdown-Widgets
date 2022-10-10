@@ -8,7 +8,7 @@
 			<key>INEnumDisplayName</key>
 			<string>Widget Type</string>
 			<key>INEnumDisplayNameID</key>
-			<string>oEHylk</string>
+			<string>NlQmPJ</string>
 			<key>INEnumGeneratesHeader</key>
 			<true/>
 			<key>INEnumName</key>
@@ -21,39 +21,39 @@
 					<key>INEnumValueDisplayName</key>
 					<string>unknown</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>QmyBKl</string>
+					<string>AjhtVt</string>
 					<key>INEnumValueName</key>
 					<string>unknown</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>World Cup</string>
+					<string>world cup</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>GtNmXG</string>
+					<string>fSsJxM</string>
 					<key>INEnumValueIndex</key>
 					<integer>1</integer>
 					<key>INEnumValueName</key>
-					<string>WorldCup</string>
+					<string>worldCup</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>Country</string>
+					<string>country</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>C5jLgE</string>
+					<string>SmKCrW</string>
 					<key>INEnumValueIndex</key>
 					<integer>2</integer>
 					<key>INEnumValueName</key>
-					<string>Country</string>
+					<string>country</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>Player</string>
+					<string>player</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>d8WOqi</string>
+					<string>kET9oO</string>
 					<key>INEnumValueIndex</key>
 					<integer>3</integer>
 					<key>INEnumValueName</key>
-					<string>Player</string>
+					<string>player</string>
 				</dict>
 			</array>
 		</dict>
@@ -82,7 +82,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>16</integer>
+			<integer>26</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
@@ -91,22 +91,20 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Widget Type</string>
+					<string>Hola</string>
 					<key>INIntentParameterDisplayNameID</key>
-					<string>vaKJkB</string>
+					<string>nJ4LtX</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
-					<key>INIntentParameterEnumType</key>
-					<string>WidgetType</string>
-					<key>INIntentParameterEnumTypeNamespace</key>
-					<string>88xZPY</string>
 					<key>INIntentParameterMetadata</key>
 					<dict>
-						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>WorldCup</string>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>uMsT2Q</string>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>WidgetType</string>
+					<string>Hola</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
@@ -121,56 +119,35 @@
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${WidgetType}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>Sry203</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${WidgetType}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>9iosB4</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
 					</array>
 					<key>INIntentParameterTag</key>
-					<integer>12</integer>
+					<integer>25</integer>
 					<key>INIntentParameterType</key>
-					<string>Integer</string>
+					<string>String</string>
 				</dict>
 				<dict>
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Country Type</string>
+					<string>Bola</string>
 					<key>INIntentParameterDisplayNameID</key>
-					<string>SiKw1r</string>
+					<string>BViA1x</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>S1fpJb</string>
+					</dict>
 					<key>INIntentParameterName</key>
-					<string>CountryType</string>
-					<key>INIntentParameterObjectType</key>
-					<string>CountryType</string>
-					<key>INIntentParameterObjectTypeNamespace</key>
-					<string>88xZPY</string>
+					<string>Bola</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Select Country</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>IHfvHS</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Configuration</string>
 						</dict>
@@ -180,42 +157,20 @@
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${CountryType}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>y2f1Xp</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${CountryType}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>wuSc1J</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
 					</array>
 					<key>INIntentParameterRelationship</key>
 					<dict>
 						<key>INIntentParameterRelationshipParentName</key>
-						<string>WidgetType</string>
+						<string>Hola</string>
 						<key>INIntentParameterRelationshipPredicateName</key>
-						<string>EnumHasExactValue</string>
+						<string>HasAnyValue</string>
 						<key>INIntentParameterRelationshipPredicateValue</key>
 						<string>Country</string>
 					</dict>
-					<key>INIntentParameterSupportsDynamicEnumeration</key>
-					<true/>
 					<key>INIntentParameterTag</key>
-					<integer>16</integer>
+					<integer>26</integer>
 					<key>INIntentParameterType</key>
-					<string>Object</string>
+					<string>String</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>
