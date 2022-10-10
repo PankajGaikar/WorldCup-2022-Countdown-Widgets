@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		6C1168D028F48A74000A0D65 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1168CF28F48A74000A0D65 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		6C1168D228F48A74000A0D65 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6C1168D128F48A74000A0D65 /* FirebaseStorage */; };
+		6C11692A28F49301000A0D65 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFA739F28E9BC5100F9AF7B /* WidgetKit.framework */; };
+		6C11692B28F49301000A0D65 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFA73A128E9BC5100F9AF7B /* SwiftUI.framework */; };
+		6C11692E28F49301000A0D65 /* WorldCupCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C11692D28F49301000A0D65 /* WorldCupCountdown.swift */; };
+		6C11693128F49302000A0D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C11693028F49302000A0D65 /* Assets.xcassets */; };
+		6C11693328F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6C11692F28F49301000A0D65 /* WorldCupCountdown.intentdefinition */; };
+		6C11693428F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6C11692F28F49301000A0D65 /* WorldCupCountdown.intentdefinition */; };
+		6C11693728F49302000A0D65 /* WorldCupCountdownExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6C11692928F49301000A0D65 /* WorldCupCountdownExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6C70D84B28EF575B0091BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */; };
 		6C70D84D28EF6B120091BD3C /* WorldCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */; };
 		6C70D85228EF74430091BD3C /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D85128EF74430091BD3C /* TimeView.swift */; };
@@ -24,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6C11693528F49302000A0D65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CFA736028E9A4D300F9AF7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C11692828F49301000A0D65;
+			remoteInfo = WorldCupCountdownExtension;
+		};
 		6CFA737928E9A4D500F9AF7B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6CFA736028E9A4D300F9AF7B /* Project object */;
@@ -47,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				6C11693728F49302000A0D65 /* WorldCupCountdownExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +71,11 @@
 /* Begin PBXFileReference section */
 		6C1168B928F31102000A0D65 /* WorldCup-2022-Countdown-Widgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WorldCup-2022-Countdown-Widgets-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6C1168BF28F31807000A0D65 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		6C11692928F49301000A0D65 /* WorldCupCountdownExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorldCupCountdownExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C11692D28F49301000A0D65 /* WorldCupCountdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupCountdown.swift; sourceTree = "<group>"; };
+		6C11692F28F49301000A0D65 /* WorldCupCountdown.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WorldCupCountdown.intentdefinition; sourceTree = "<group>"; };
+		6C11693028F49302000A0D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C11693228F49302000A0D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupViewModel.swift; sourceTree = "<group>"; };
 		6C70D85128EF74430091BD3C /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
@@ -76,6 +96,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6C11692628F49301000A0D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C11692B28F49301000A0D65 /* SwiftUI.framework in Frameworks */,
+				6C11692A28F49301000A0D65 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CFA736528E9A4D300F9AF7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,6 +131,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C11692C28F49301000A0D65 /* WorldCupCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				6C11692D28F49301000A0D65 /* WorldCupCountdown.swift */,
+				6C11692F28F49301000A0D65 /* WorldCupCountdown.intentdefinition */,
+				6C11693028F49302000A0D65 /* Assets.xcassets */,
+				6C11693228F49302000A0D65 /* Info.plist */,
+			);
+			path = WorldCupCountdown;
+			sourceTree = "<group>";
+		};
 		6C70D84F28EF74220091BD3C /* Containers */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +165,7 @@
 				6CFA736A28E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets */,
 				6CFA737B28E9A4D500F9AF7B /* WorldCup 2022 Countdown WidgetsTests */,
 				6CFA738528E9A4D500F9AF7B /* WorldCup 2022 Countdown WidgetsUITests */,
+				6C11692C28F49301000A0D65 /* WorldCupCountdown */,
 				6CFA739E28E9BC5100F9AF7B /* Frameworks */,
 				6CFA736928E9A4D300F9AF7B /* Products */,
 			);
@@ -136,6 +177,7 @@
 				6CFA736828E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets.app */,
 				6CFA737828E9A4D500F9AF7B /* WorldCup 2022 Countdown WidgetsTests.xctest */,
 				6CFA738228E9A4D500F9AF7B /* WorldCup 2022 Countdown WidgetsUITests.xctest */,
+				6C11692928F49301000A0D65 /* WorldCupCountdownExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +276,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6C11692828F49301000A0D65 /* WorldCupCountdownExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C11693828F49302000A0D65 /* Build configuration list for PBXNativeTarget "WorldCupCountdownExtension" */;
+			buildPhases = (
+				6C11692528F49301000A0D65 /* Sources */,
+				6C11692628F49301000A0D65 /* Frameworks */,
+				6C11692728F49301000A0D65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorldCupCountdownExtension;
+			productName = WorldCupCountdownExtension;
+			productReference = 6C11692928F49301000A0D65 /* WorldCupCountdownExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		6CFA736728E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CFA738C28E9A4D500F9AF7B /* Build configuration list for PBXNativeTarget "WorldCup 2022 Countdown Widgets" */;
@@ -246,6 +305,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6C11693628F49302000A0D65 /* PBXTargetDependency */,
 			);
 			name = "WorldCup 2022 Countdown Widgets";
 			packageProductDependencies = (
@@ -302,6 +362,9 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					6C11692828F49301000A0D65 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 					6CFA736728E9A4D300F9AF7B = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -334,11 +397,20 @@
 				6CFA736728E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets */,
 				6CFA737728E9A4D500F9AF7B /* WorldCup 2022 Countdown WidgetsTests */,
 				6CFA738128E9A4D500F9AF7B /* WorldCup 2022 Countdown WidgetsUITests */,
+				6C11692828F49301000A0D65 /* WorldCupCountdownExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6C11692728F49301000A0D65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C11693128F49302000A0D65 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CFA736628E9A4D300F9AF7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,12 +438,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6C11692528F49301000A0D65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C11693328F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */,
+				6C11692E28F49301000A0D65 /* WorldCupCountdown.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CFA736428E9A4D300F9AF7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6CFA73B828EE276000F9AF7B /* Teams.swift in Sources */,
 				6C70D85528EF7F670091BD3C /* WidgetView.swift in Sources */,
+				6C11693428F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */,
 				6CFA736E28E9A4D300F9AF7B /* RootContainerView.swift in Sources */,
 				6CFA736C28E9A4D300F9AF7B /* WorldCup_2022_Countdown_WidgetsApp.swift in Sources */,
 				6C70D84D28EF6B120091BD3C /* WorldCupViewModel.swift in Sources */,
@@ -399,6 +481,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6C11693628F49302000A0D65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C11692828F49301000A0D65 /* WorldCupCountdownExtension */;
+			targetProxy = 6C11693528F49302000A0D65 /* PBXContainerItemProxy */;
+		};
 		6CFA737A28E9A4D500F9AF7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6CFA736728E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets */;
@@ -412,6 +499,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6C11693928F49302000A0D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3H2F8CC68;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldCupCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WorldCupCountdown;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pankajgaikar.WorldCup-2022-Countdown-Widgets.WorldCupCountdown";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C11693A28F49302000A0D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3H2F8CC68;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldCupCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WorldCupCountdown;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pankajgaikar.WorldCup-2022-Countdown-Widgets.WorldCupCountdown";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6CFA738A28E9A4D500F9AF7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -669,6 +810,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6C11693828F49302000A0D65 /* Build configuration list for PBXNativeTarget "WorldCupCountdownExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C11693928F49302000A0D65 /* Debug */,
+				6C11693A28F49302000A0D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6CFA736328E9A4D300F9AF7B /* Build configuration list for PBXProject "WorldCup 2022 Countdown Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
