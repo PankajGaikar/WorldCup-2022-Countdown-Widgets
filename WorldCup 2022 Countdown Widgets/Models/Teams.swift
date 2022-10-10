@@ -307,15 +307,6 @@ enum Country: CaseIterable {
  }
 
  /*
-  func provideCountryOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<CountryType>?, Error?) -> Void) {
-      var albums: [CountryType] = []
-
-      for country in Country.allCases {
-          albums.append(CountryType(identifier: country.getCountryCode(), display: country.getCountryName(), pronunciationHint: country.getCountryName()))
-      }
-      completion(INObjectCollection(items: albums), nil)
-
-  }
   */
 
  */
