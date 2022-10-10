@@ -24,6 +24,8 @@
 		6C11694D28F49607000A0D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CFA736F28E9A4D400F9AF7B /* Assets.xcassets */; };
 		6C11694E28F49626000A0D65 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA73B728EE276000F9AF7B /* Teams.swift */; };
 		6C11694F28F49626000A0D65 /* WorldCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */; };
+		6C11695228F49E29000A0D65 /* WorldCupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C11695128F49E29000A0D65 /* WorldCupView.swift */; };
+		6C11695328F49E78000A0D65 /* WorldCupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C11695128F49E29000A0D65 /* WorldCupView.swift */; };
 		6C70D84B28EF575B0091BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */; };
 		6C70D84D28EF6B120091BD3C /* WorldCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */; };
 		6C70D85228EF74430091BD3C /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D85128EF74430091BD3C /* TimeView.swift */; };
@@ -95,6 +97,7 @@
 		6C11693F28F49437000A0D65 /* WorldCupIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WorldCupIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C11694228F49437000A0D65 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		6C11694428F49437000A0D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C11695128F49E29000A0D65 /* WorldCupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupView.swift; sourceTree = "<group>"; };
 		6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupViewModel.swift; sourceTree = "<group>"; };
 		6C70D85128EF74430091BD3C /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		6C11692C28F49301000A0D65 /* WorldCupCountdown */ = {
 			isa = PBXGroup;
 			children = (
+				6C11695028F49E1D000A0D65 /* View */,
 				6C11692D28F49301000A0D65 /* WorldCupCountdown.swift */,
 				6C11692F28F49301000A0D65 /* WorldCupCountdown.intentdefinition */,
 				6C11693028F49302000A0D65 /* Assets.xcassets */,
@@ -176,6 +180,14 @@
 				6C11694428F49437000A0D65 /* Info.plist */,
 			);
 			path = WorldCupIntent;
+			sourceTree = "<group>";
+		};
+		6C11695028F49E1D000A0D65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C11695128F49E29000A0D65 /* WorldCupView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6C70D84F28EF74220091BD3C /* Containers */ = {
@@ -512,6 +524,7 @@
 			files = (
 				6C11694E28F49626000A0D65 /* Teams.swift in Sources */,
 				6C11693328F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */,
+				6C11695328F49E78000A0D65 /* WorldCupView.swift in Sources */,
 				6C11694F28F49626000A0D65 /* WorldCupViewModel.swift in Sources */,
 				6C11692E28F49301000A0D65 /* WorldCupCountdown.swift in Sources */,
 			);
@@ -531,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C11695228F49E29000A0D65 /* WorldCupView.swift in Sources */,
 				6CFA73B828EE276000F9AF7B /* Teams.swift in Sources */,
 				6C70D85528EF7F670091BD3C /* WidgetView.swift in Sources */,
 				6C11693428F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */,

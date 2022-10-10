@@ -13,7 +13,9 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
         var albums: [WidgetCountry] = []
 
         for country in Country.allCases {
-            albums.append(WidgetCountry(identifier: country.getCountryCode(), display: country.getCountryName(), pronunciationHint: country.getCountryName()))
+            let widgetCountry = WidgetCountry(identifier: country.getCountryCode(), display: country.getCountryName(), pronunciationHint: country.getCountryName())
+            widgetCountry.imageName = country.getImageName()
+            albums.append(widgetCountry)
         }
         completion(INObjectCollection(items: albums), nil)
 
