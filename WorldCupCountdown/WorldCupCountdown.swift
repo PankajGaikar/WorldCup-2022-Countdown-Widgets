@@ -44,7 +44,34 @@ struct WorldCupCountdownEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        ZStack(alignment: .bottomLeading) {
+            Image("WorldCup_1024")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background(Image("WorldCup_1024").resizable().scaledToFill())
+
+            ZStack {
+                VStack {
+                    Text("Time to WorldCup")
+                        .font(.body)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.2)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+
+                    Text(WorldCupViewModel().getTimeToWorldCup())
+                        .font(.title)
+                        .bold()
+                        .minimumScaleFactor(0.2)
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 5)
+                        .foregroundColor(.white)
+                }
+            }
+            .background(Color.black.opacity(0.4))
+        }
     }
 }
 
