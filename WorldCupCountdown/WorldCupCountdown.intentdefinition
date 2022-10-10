@@ -6,13 +6,13 @@
 	<array>
 		<dict>
 			<key>INEnumDisplayName</key>
-			<string>Enum</string>
+			<string>Widget Type</string>
 			<key>INEnumDisplayNameID</key>
 			<string>8byNiu</string>
 			<key>INEnumGeneratesHeader</key>
 			<true/>
 			<key>INEnumName</key>
-			<string>Enum</string>
+			<string>WidgetType</string>
 			<key>INEnumType</key>
 			<string>Regular</string>
 			<key>INEnumValues</key>
@@ -27,136 +27,33 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>value</string>
+					<string>world cup</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>1wGYEX</string>
+					<string>CKREHa</string>
 					<key>INEnumValueIndex</key>
 					<integer>1</integer>
 					<key>INEnumValueName</key>
-					<string>value</string>
+					<string>worldCup</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>value 1</string>
+					<string>country</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>VZyobw</string>
+					<string>yzHFd3</string>
 					<key>INEnumValueIndex</key>
 					<integer>2</integer>
 					<key>INEnumValueName</key>
-					<string>value1</string>
+					<string>country</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>value 2</string>
+					<string>player</string>
 					<key>INEnumValueDisplayNameID</key>
-					<string>dMa3vO</string>
+					<string>gtDOx4</string>
 					<key>INEnumValueIndex</key>
 					<integer>3</integer>
 					<key>INEnumValueName</key>
-					<string>value2</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 3</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>S9ce3A</string>
-					<key>INEnumValueIndex</key>
-					<integer>4</integer>
-					<key>INEnumValueName</key>
-					<string>value3</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 4</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>iR6r3P</string>
-					<key>INEnumValueIndex</key>
-					<integer>5</integer>
-					<key>INEnumValueName</key>
-					<string>value4</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>INEnumDisplayName</key>
-			<string>Enum 1</string>
-			<key>INEnumDisplayNameID</key>
-			<string>dC3M08</string>
-			<key>INEnumGeneratesHeader</key>
-			<true/>
-			<key>INEnumName</key>
-			<string>Enum1</string>
-			<key>INEnumType</key>
-			<string>Regular</string>
-			<key>INEnumValues</key>
-			<array>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>unknown</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>fiybtT</string>
-					<key>INEnumValueName</key>
-					<string>unknown</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>450JYU</string>
-					<key>INEnumValueIndex</key>
-					<integer>1</integer>
-					<key>INEnumValueName</key>
-					<string>value</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 1</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>EhxzK2</string>
-					<key>INEnumValueIndex</key>
-					<integer>2</integer>
-					<key>INEnumValueName</key>
-					<string>value1</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 2</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>YQqCJK</string>
-					<key>INEnumValueIndex</key>
-					<integer>3</integer>
-					<key>INEnumValueName</key>
-					<string>value2</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 3</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>VuPO7p</string>
-					<key>INEnumValueIndex</key>
-					<integer>4</integer>
-					<key>INEnumValueName</key>
-					<string>value3</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 4</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>YXhm5A</string>
-					<key>INEnumValueIndex</key>
-					<integer>5</integer>
-					<key>INEnumValueName</key>
-					<string>value4</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>value 5</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>SLn4T3</string>
-					<key>INEnumValueIndex</key>
-					<integer>6</integer>
-					<key>INEnumValueName</key>
-					<string>value5</string>
+					<string>player</string>
 				</dict>
 			</array>
 		</dict>
@@ -183,7 +80,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>4</integer>
+			<integer>6</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
@@ -198,13 +95,13 @@
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
 					<key>INIntentParameterEnumType</key>
-					<string>Enum</string>
+					<string>WidgetType</string>
 					<key>INIntentParameterEnumTypeNamespace</key>
 					<string>88xZPY</string>
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>value2</string>
+						<string>worldCup</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>parameter</string>
@@ -217,17 +114,52 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Parameter 1</string>
+					<string>Country</string>
 					<key>INIntentParameterDisplayNameID</key>
-					<string>lZhIhy</string>
+					<string>ygjsWv</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>2</integer>
-					<key>INIntentParameterEnumType</key>
-					<string>Enum1</string>
-					<key>INIntentParameterEnumTypeNamespace</key>
-					<string>88xZPY</string>
 					<key>INIntentParameterName</key>
-					<string>parameter1</string>
+					<string>country</string>
+					<key>INIntentParameterObjectType</key>
+					<string>WidgetCountry</string>
+					<key>INIntentParameterObjectTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${country}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>t0vFZi</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${country}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>otrvsx</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
 					<key>INIntentParameterRelationship</key>
 					<dict>
 						<key>INIntentParameterRelationshipParentName</key>
@@ -235,12 +167,14 @@
 						<key>INIntentParameterRelationshipPredicateName</key>
 						<string>EnumHasExactValue</string>
 						<key>INIntentParameterRelationshipPredicateValue</key>
-						<string>value4</string>
+						<string>country</string>
 					</dict>
+					<key>INIntentParameterSupportsDynamicEnumeration</key>
+					<true/>
 					<key>INIntentParameterTag</key>
-					<integer>4</integer>
+					<integer>6</integer>
 					<key>INIntentParameterType</key>
-					<string>Integer</string>
+					<string>Object</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>
@@ -270,6 +204,70 @@
 		</dict>
 	</array>
 	<key>INTypes</key>
-	<array/>
+	<array>
+		<dict>
+			<key>INTypeDisplayName</key>
+			<string>Widget Country</string>
+			<key>INTypeDisplayNameID</key>
+			<string>KYP0sm</string>
+			<key>INTypeLastPropertyTag</key>
+			<integer>99</integer>
+			<key>INTypeName</key>
+			<string>WidgetCountry</string>
+			<key>INTypeProperties</key>
+			<array>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>1</integer>
+					<key>INTypePropertyName</key>
+					<string>identifier</string>
+					<key>INTypePropertyTag</key>
+					<integer>1</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>2</integer>
+					<key>INTypePropertyName</key>
+					<string>displayString</string>
+					<key>INTypePropertyTag</key>
+					<integer>2</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>3</integer>
+					<key>INTypePropertyName</key>
+					<string>pronunciationHint</string>
+					<key>INTypePropertyTag</key>
+					<integer>3</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>4</integer>
+					<key>INTypePropertyName</key>
+					<string>alternativeSpeakableMatches</string>
+					<key>INTypePropertySupportsMultipleValues</key>
+					<true/>
+					<key>INTypePropertyTag</key>
+					<integer>4</integer>
+					<key>INTypePropertyType</key>
+					<string>SpeakableString</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
