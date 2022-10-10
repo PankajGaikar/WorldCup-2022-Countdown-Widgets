@@ -248,3 +248,74 @@ enum Country: CaseIterable {
         }
     }
 }
+
+/*
+
+ struct WorldCup_CountdownEntryView : View {
+     var entry: Provider.Entry
+
+     var body: some View {
+         ZStack(alignment: .bottomLeading) {
+             Image("WorldCup_1024")
+                 .resizable()
+                 .scaledToFit()
+                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                 .background(Image("WorldCup_1024").resizable().scaledToFill())
+
+             ZStack {
+                 VStack {
+                     Text("Time to WorldCup")
+                         .font(.body)
+                         .lineLimit(1)
+                         .minimumScaleFactor(0.2)
+                         .frame(maxWidth: .infinity)
+                         .foregroundColor(.white)
+
+                     Text(WorldCupViewModel().getTimeToWorldCup())
+                         .font(.title)
+                         .bold()
+                         .minimumScaleFactor(0.2)
+                         .lineLimit(1)
+                         .frame(maxWidth: .infinity)
+                         .padding(.horizontal, 5)
+                         .foregroundColor(.white)
+                 }
+             }
+             .background(Color.black.opacity(0.4))
+         }
+     }
+ }
+
+ @main
+ struct WorldCup_Countdown: Widget {
+     let kind: String = "WorldCup_Countdown"
+
+     var body: some WidgetConfiguration {
+         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+             WorldCup_CountdownEntryView(entry: entry)
+         }
+         .configurationDisplayName("My Widget")
+         .description("This is an example widget.")
+     }
+ }
+
+ struct WorldCup_Countdown_Previews: PreviewProvider {
+     static var previews: some View {
+         WorldCup_CountdownEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+             .previewContext(WidgetPreviewContext(family: .systemSmall))
+     }
+ }
+
+ /*
+  func provideCountryOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<CountryType>?, Error?) -> Void) {
+      var albums: [CountryType] = []
+
+      for country in Country.allCases {
+          albums.append(CountryType(identifier: country.getCountryCode(), display: country.getCountryName(), pronunciationHint: country.getCountryName()))
+      }
+      completion(INObjectCollection(items: albums), nil)
+
+  }
+  */
+
+ */
