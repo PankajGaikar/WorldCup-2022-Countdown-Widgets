@@ -89,7 +89,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Parameter</string>
+					<string>Widget Type</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>mJxsBF</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -104,7 +104,42 @@
 						<string>worldCup</string>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>parameter</string>
+					<string>widgetType</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${widgetType}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>nyY19g</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${widgetType}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>BFmyGU</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
 					<key>INIntentParameterTag</key>
 					<integer>2</integer>
 					<key>INIntentParameterType</key>
@@ -139,31 +174,11 @@
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${country}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>t0vFZi</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${country}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>otrvsx</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
 					</array>
 					<key>INIntentParameterRelationship</key>
 					<dict>
 						<key>INIntentParameterRelationshipParentName</key>
-						<string>parameter</string>
+						<string>widgetType</string>
 						<key>INIntentParameterRelationshipPredicateName</key>
 						<string>EnumHasExactValue</string>
 						<key>INIntentParameterRelationshipPredicateValue</key>
@@ -211,7 +226,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>KYP0sm</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>99</integer>
+			<integer>100</integer>
 			<key>INTypeName</key>
 			<string>WidgetCountry</string>
 			<key>INTypeProperties</key>
@@ -265,6 +280,20 @@
 					<integer>4</integer>
 					<key>INTypePropertyType</key>
 					<string>SpeakableString</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Image Name</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>fwXBAR</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>5</integer>
+					<key>INTypePropertyName</key>
+					<string>imageName</string>
+					<key>INTypePropertyTag</key>
+					<integer>100</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
 				</dict>
 			</array>
 		</dict>
