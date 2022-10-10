@@ -4,7 +4,7 @@
 <dict>
 	<key>INIntentsSupported</key>
 	<array>
-		<string>ConfigurationIntent</string>
+		<string>IntentHandler</string>
 	</array>
 	<key>NSUserActivityTypes</key>
 	<array>
