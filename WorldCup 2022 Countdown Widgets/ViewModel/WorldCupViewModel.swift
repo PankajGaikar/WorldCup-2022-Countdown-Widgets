@@ -6,14 +6,16 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class WorldCupViewModel: NSObject, ObservableObject {
 
+    static let shared = WorldCupViewModel()
     var nowDate: Date
     let referenceDate: Date
     @Published var timeToWorldCup: DateComponents?
     let playerNames = ["bale", "davies", "debruyne", "eriksen_prem", "griezmann_prem", "hakimi", "hakimi_prem", "hernandez_prem", "honda_prem", "kane_prem", "khazri_prem", "kimmich", "kroose_germany_prem", "lewandowski", "lewandowski_poland_prem", "mane_prem", "matic_prem", "messi_prem", "modric", "modric_prem", "pedri", "pulisic", "ronaldo_prem", "ruiz_prem", "sahlawi_prem", "sardar", "son_prem", "suarez_prem", "xhaka_prem"]
-    
+
     var timer: Timer {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
             self.nowDate = Date()
@@ -21,12 +23,27 @@ class WorldCupViewModel: NSObject, ObservableObject {
         }
     }
 
+    let db = Firestore.firestore()
+    var players: [Player] = []
+
     override init() {
         self.referenceDate = WorldCupViewModel.getDate()!
         self.nowDate = Date()
         super.init()
         _ = self.timer
+        getPlayers()
 
+    }
+
+    func getPlayers() {
+        db.collection("Players").getDocuments { querySnapshot, err in
+            if let err = err { return }
+            for document in querySnapshot!.documents {
+                print("\(document.documentID) => \(document.data())")
+                self.players.append(Player(id: document.documentID, name: document["name"] as! String, countryCode: document["countryCode"] as! String, imageUrl: document["imageUrl"] as! String, country: document["country"] as! String))
+            }
+            print(self.players)
+        }
     }
 
     static func getDate() -> Date? {

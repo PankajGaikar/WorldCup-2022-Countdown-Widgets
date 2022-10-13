@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootContainerView: View {
 
-    @ObservedObject var viewModel = WorldCupViewModel()
+    @ObservedObject var viewModel = WorldCupViewModel.shared
 
     var body: some View {
             ScrollView {

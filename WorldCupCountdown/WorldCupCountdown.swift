@@ -8,6 +8,8 @@
 import WidgetKit
 import SwiftUI
 import Intents
+import FirebaseCore
+import FirebaseAnalytics
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> WorldCupEntry {
@@ -63,7 +65,7 @@ struct WorldCupCountdownEntryView : View {
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
                         
-                        Text(WorldCupViewModel().getTimeToWorldCup())
+                        Text(WorldCupViewModel.shared.getTimeToWorldCup())
                             .font(.title)
                             .bold()
                             .minimumScaleFactor(0.2)
@@ -86,6 +88,11 @@ struct WorldCupCountdownEntryView : View {
 @main
 struct WorldCupCountdown: Widget {
     let kind: String = "WorldCupCountdown"
+
+    init() {
+        FirebaseApp.configure()
+        Analytics.setAnalyticsCollectionEnabled(true)
+    }
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
