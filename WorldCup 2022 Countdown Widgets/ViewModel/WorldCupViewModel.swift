@@ -36,13 +36,15 @@ class WorldCupViewModel: NSObject, ObservableObject {
     }
 
     func getPlayers() {
+        var newPlayers: [Player] = []
         db.collection("PlayerDatabase").getDocuments { querySnapshot, err in
-            if let err = err { return }
+            if let err = err { print(err); return }
             for document in querySnapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
-                self.players.append(Player(id: document.documentID, name: document["name"] as! String, countryCode: document["countryCode"] as! String, imageUrl: document["imagePath"] as! String, country: document["country"] as! String))
+                newPlayers.append(Player(id: document.documentID, name: document["name"] as! String, countryCode: document["countryCode"] as! String, imagePath: document["imagePath"] as! String, country: document["country"] as! String, rank: document["rank"] as! Int))
             }
-            print(self.players)
+            print(newPlayers)
+            self.players = newPlayers.sorted(by: { $0.rank < $1.rank })
         }
     }
 
