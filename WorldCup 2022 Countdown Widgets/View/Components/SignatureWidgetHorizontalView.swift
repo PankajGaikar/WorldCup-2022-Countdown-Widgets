@@ -19,8 +19,8 @@ struct SignatureWidgetHorizontalView: View {
             .foregroundColor(.white)
             .background(Color.black.opacity(0.5))
 
-        WidgetView(imageName: "WorldCup_1024")
-        .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
+        WidgetView(imagePath: "WorldCup")
+            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
     }
 }
 

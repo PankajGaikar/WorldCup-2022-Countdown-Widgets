@@ -24,18 +24,20 @@ struct CountriesHorizontalView: View {
                 ForEach(Country.allCases, id: \.self) { country in
 
                     VStack {
-                        WidgetView(imageName: country.getImageName())
+                        WidgetView(imagePath: country.getImageName())
                             .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
+                        .cornerRadius(10)
 
                         Text(country.getCountryName())
                             .font(.title2)
                             .bold()
                             .foregroundColor(.white)
-                            .padding(.horizontal)
-                            .padding(.bottom)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.black.opacity(0.2))
+                            .cornerRadius(10)
                     }
-                    .background(Color.black.opacity(0.2))
-                    .cornerRadius(10)
+                    .frame(width: UIScreen.main.bounds.width / 2)
                 }
             }
             .padding(.leading)
