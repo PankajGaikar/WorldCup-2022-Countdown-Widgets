@@ -25,7 +25,7 @@ struct WorldCupView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
 
-                    Text(WorldCupViewModel().getTimeToWorldCup())
+                    Text(WorldCupViewModel.shared.getTimeToWorldCup())
                         .font(.title)
                         .bold()
                         .minimumScaleFactor(0.2)
