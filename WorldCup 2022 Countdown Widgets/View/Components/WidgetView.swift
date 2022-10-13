@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct WidgetView: View {
 
-    let imageName: String
+    let imagePath: String
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image(imageName)
+            WebImage(url: URL(string: "https://github.com/PankajGaikar/Storage/blob/main/\(imagePath).jpg?raw=true"))
                 .resizable()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
@@ -50,6 +51,6 @@ struct ContentView_Previews_1: PreviewProvider {
 
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetView(imageName: "WorldCup_1024")
+        WidgetView(imagePath: "WorldCup_1024")
     }
 }

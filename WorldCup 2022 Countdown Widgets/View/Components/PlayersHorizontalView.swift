@@ -27,8 +27,7 @@ struct PlayersHorizontalView: View {
                 ForEach(viewModel.players) { player in
 
                     VStack {
-                        WebImage(url: URL(string: player.imageUrl))
-                            .resizable()
+                        WidgetView(imagePath: player.imageUrl)
                             .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
                         .cornerRadius(10)
 
