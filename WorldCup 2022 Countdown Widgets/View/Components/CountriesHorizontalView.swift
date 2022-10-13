@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CountriesHorizontalView: View {
     var body: some View {
@@ -24,8 +25,35 @@ struct CountriesHorizontalView: View {
                 ForEach(Country.allCases, id: \.self) { country in
 
                     VStack {
-                        WidgetView(imagePath: country.getImageName())
-                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
+                        ZStack(alignment: .bottomLeading) {
+                            WebImage(url: URL(string: "https://github.com/PankajGaikar/Storage/blob/main/\(country.getImageName()).jpg?raw=true"))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+
+                            ZStack {
+                                VStack {
+                                    Text("Time to WorldCup")
+                                        .font(.body)
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.2)
+                                        .frame(maxWidth: .infinity)
+                                        .foregroundColor(.white)
+
+                                    Text(WorldCupViewModel.shared.getTimeToWorldCup())
+                                        .font(.title)
+                                        .bold()
+                                        .minimumScaleFactor(0.2)
+                                        .lineLimit(1)
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.horizontal, 5)
+                                        .foregroundColor(.white)
+                                }
+                            }
+                            .background(Color.black.opacity(0.4))
+                        }
+                        .frame(height: UIScreen.main.bounds.width / 2)
+                        .background(Color.black.opacity(0.4))
                         .cornerRadius(10)
 
                         Text(country.getCountryName())
