@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PlayersHorizontalView: View {
     @ObservedObject var viewModel = WorldCupViewModel.shared
@@ -23,25 +24,35 @@ struct PlayersHorizontalView: View {
 
         ScrollView(.horizontal) {
             HStack {
-                ForEach(viewModel.playerNames, id: \.self) { player in
+                ForEach(viewModel.players) { player in
 
                     VStack {
-                        WidgetView(imageName: player)
+                        WebImage(url: URL(string: player.imageUrl))
+                            .resizable()
                             .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
+                        .cornerRadius(10)
 
-                        Text(player)
+                        Text(player.name)
                             .font(.title2)
                             .bold()
                             .foregroundColor(.white)
-                            .padding(.horizontal)
-                            .padding(.bottom)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.black.opacity(0.2))
+                            .cornerRadius(10)
                     }
-                    .background(Color.black.opacity(0.2))
-                    .cornerRadius(10)
+                    .frame(width: UIScreen.main.bounds.width / 2)
                 }
+
             }
             .padding(.leading)
         }
+    }
+}
+
+struct ContentView_Previews1: PreviewProvider {
+    static var previews: some View {
+        RootContainerView()
     }
 }
 

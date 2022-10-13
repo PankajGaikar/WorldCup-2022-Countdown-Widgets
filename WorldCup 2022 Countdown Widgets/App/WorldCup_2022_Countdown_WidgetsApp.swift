@@ -8,12 +8,28 @@
 import SwiftUI
 import FirebaseCore
 import FirebaseAnalytics
+import SDWebImageSwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         Analytics.setAnalyticsCollectionEnabled(true)
+
+
+
+        // Add default HTTP header
+        SDWebImageDownloader.shared.setValue("image/webp,image/apng,image/*,*/*;q=0.8", forHTTPHeaderField: "Accept")
+
+        // Add multiple caches
+        let cache = SDImageCache(namespace: "tiny")
+        cache.config.maxMemoryCost = 500 * 1024 * 1024 // 100MB memory
+        cache.config.maxDiskSize = 250 * 1024 * 1024 // 50MB disk
+        SDImageCachesManager.shared.addCache(cache)
+        SDWebImageManager.defaultImageCache = SDImageCachesManager.shared
+
+        SDWebImageManager.defaultImageLoader = SDImageLoadersManager.shared
+
         return true
     }
 }
