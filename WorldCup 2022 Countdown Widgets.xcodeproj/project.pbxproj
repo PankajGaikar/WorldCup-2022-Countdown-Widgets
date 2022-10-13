@@ -39,6 +39,9 @@
 		6CA784E328F89302003780CC /* CountriesHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA784E228F89302003780CC /* CountriesHorizontalView.swift */; };
 		6CA784E528F893DC003780CC /* CountdownHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA784E428F893DC003780CC /* CountdownHeaderView.swift */; };
 		6CA784E728F8940C003780CC /* SignatureWidgetHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA784E628F8940C003780CC /* SignatureWidgetHorizontalView.swift */; };
+		6CA784EA28F894C7003780CC /* UserDefaultsStore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA784E928F894C7003780CC /* UserDefaultsStore */; };
+		6CA784EC28F894E9003780CC /* UserDefaultsStore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA784EB28F894E9003780CC /* UserDefaultsStore */; };
+		6CA784F228F89732003780CC /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA784F128F89732003780CC /* SDWebImageSwiftUI */; };
 		6CFA736C28E9A4D300F9AF7B /* WorldCup_2022_Countdown_WidgetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA736B28E9A4D300F9AF7B /* WorldCup_2022_Countdown_WidgetsApp.swift */; };
 		6CFA736E28E9A4D300F9AF7B /* RootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA736D28E9A4D300F9AF7B /* RootContainerView.swift */; };
 		6CFA737028E9A4D400F9AF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CFA736F28E9A4D400F9AF7B /* Assets.xcassets */; };
@@ -140,6 +143,7 @@
 				6CA784DC28F88BF3003780CC /* FirebaseFirestoreSwift in Frameworks */,
 				6C11692B28F49301000A0D65 /* SwiftUI.framework in Frameworks */,
 				6CA784D028F88A2C003780CC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				6CA784EC28F894E9003780CC /* UserDefaultsStore in Frameworks */,
 				6C11692A28F49301000A0D65 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,8 +160,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA784F228F89732003780CC /* SDWebImageSwiftUI in Frameworks */,
 				6C1168D028F48A74000A0D65 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				6CA784DA28F88BEA003780CC /* FirebaseFirestoreSwift in Frameworks */,
+				6CA784EA28F894C7003780CC /* UserDefaultsStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +371,7 @@
 			packageProductDependencies = (
 				6CA784CF28F88A2C003780CC /* FirebaseAnalyticsWithoutAdIdSupport */,
 				6CA784DB28F88BF3003780CC /* FirebaseFirestoreSwift */,
+				6CA784EB28F894E9003780CC /* UserDefaultsStore */,
 			);
 			productName = WorldCupCountdownExtension;
 			productReference = 6C11692928F49301000A0D65 /* WorldCupCountdownExtension.appex */;
@@ -406,6 +413,8 @@
 			packageProductDependencies = (
 				6C1168CF28F48A74000A0D65 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				6CA784D928F88BEA003780CC /* FirebaseFirestoreSwift */,
+				6CA784E928F894C7003780CC /* UserDefaultsStore */,
+				6CA784F128F89732003780CC /* SDWebImageSwiftUI */,
 			);
 			productName = "WorldCup 2022 Countdown Widgets";
 			productReference = 6CFA736828E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets.app */;
@@ -487,6 +496,8 @@
 			mainGroup = 6CFA735F28E9A4D300F9AF7B;
 			packageReferences = (
 				6C1168CE28F48A74000A0D65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6CA784E828F894C7003780CC /* XCRemoteSwiftPackageReference "Stores" */,
+				6CA784F028F89732003780CC /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 6CFA736928E9A4D300F9AF7B /* Products */;
 			projectDirPath = "";
@@ -1058,6 +1069,22 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		6CA784E828F894C7003780CC /* XCRemoteSwiftPackageReference "Stores" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/omaralbeik/Stores.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+		6CA784F028F89732003780CC /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1080,6 +1107,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C1168CE28F48A74000A0D65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		6CA784E928F894C7003780CC /* UserDefaultsStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CA784E828F894C7003780CC /* XCRemoteSwiftPackageReference "Stores" */;
+			productName = UserDefaultsStore;
+		};
+		6CA784EB28F894E9003780CC /* UserDefaultsStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CA784E828F894C7003780CC /* XCRemoteSwiftPackageReference "Stores" */;
+			productName = UserDefaultsStore;
+		};
+		6CA784F128F89732003780CC /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CA784F028F89732003780CC /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
