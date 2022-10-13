@@ -24,7 +24,7 @@ class WorldCupViewModel: NSObject, ObservableObject {
     }
 
     let db = Firestore.firestore()
-    var players: [Player] = []
+    @Published var players: [Player] = []
 
     override init() {
         self.referenceDate = WorldCupViewModel.getDate()!
