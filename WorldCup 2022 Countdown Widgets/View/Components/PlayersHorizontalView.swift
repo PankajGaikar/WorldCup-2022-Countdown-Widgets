@@ -27,7 +27,7 @@ struct PlayersHorizontalView: View {
                 ForEach(viewModel.players) { player in
 
                     VStack {
-                        WidgetView(imagePath: player.imageUrl)
+                        WidgetView(imagePath: player.imagePath)
                             .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
                         .cornerRadius(10)
 
