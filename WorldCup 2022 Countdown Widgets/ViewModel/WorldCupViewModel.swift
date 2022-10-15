@@ -14,7 +14,7 @@ class WorldCupViewModel: NSObject, ObservableObject {
     var nowDate: Date
     let referenceDate: Date
     @Published var timeToWorldCup: DateComponents?
-    let playerNames = ["bale", "davies", "debruyne", "eriksen_prem", "griezmann_prem", "hakimi", "hakimi_prem", "hernandez_prem", "honda_prem", "kane_prem", "khazri_prem", "kimmich", "kroose_germany_prem", "lewandowski", "lewandowski_poland_prem", "mane_prem", "matic_prem", "messi_prem", "modric", "modric_prem", "pedri", "pulisic", "ronaldo_prem", "ruiz_prem", "sahlawi_prem", "sardar", "son_prem", "suarez_prem", "xhaka_prem"]
+    static let LAST_NETWORK_FETCH = "LAST_NETWORK_FETCH"
 
     var timer: Timer {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
@@ -36,13 +36,20 @@ class WorldCupViewModel: NSObject, ObservableObject {
     }
 
     func getPlayers() {
-        if PersistanceManager.shared.retrievePlayers().count > 0 {
+        if WorldCupViewModel.shouldMakeNetworkFetch() == false {
+            print("Fetching local")
             players = PersistanceManager.shared.retrievePlayers()
             return
         }
+        print("Fetching network")
+
         var newPlayers: [Player] = []
         db.collection("PlayerDatabase").getDocuments { querySnapshot, err in
-            if let err = err { print(err); return }
+            if let err = err {
+                print(err);
+                self.players = PersistanceManager.shared.retrievePlayers()
+                return
+            }
             for document in querySnapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
                 let player = Player(id: document.documentID,
@@ -54,9 +61,15 @@ class WorldCupViewModel: NSObject, ObservableObject {
                 newPlayers.append(player)
                 PersistanceManager.shared.store(player: player)
             }
-            print(newPlayers)
             self.players = newPlayers.sorted(by: { $0.rank < $1.rank })
+            UserDefaults(suiteName: PersistanceManager.SHARED_APP_GROUP_KEY)!.setValue(Date(), forKey: WorldCupViewModel.LAST_NETWORK_FETCH)
+            UserDefaults(suiteName: PersistanceManager.SHARED_APP_GROUP_KEY)!.synchronize()
         }
+    }
+
+    static func shouldMakeNetworkFetch() -> Bool {
+        guard let date = UserDefaults(suiteName: PersistanceManager.SHARED_APP_GROUP_KEY)!.value(forKey: WorldCupViewModel.LAST_NETWORK_FETCH) as? Date else { return true }
+        return Calendar.current.dateComponents([.hour], from: date, to: Date()).hour ?? 13 > 12 ? true : false
     }
 
     static func getDate() -> Date? {
