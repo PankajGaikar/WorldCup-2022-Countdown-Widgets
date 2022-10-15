@@ -19,6 +19,8 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
 
         if WorldCupViewModel.shouldMakeNetworkFetch() == false {
             print("Fetching local")
+            WorldCupAnalytics().reportAnalytics(location: "IntentHandler", data: "fetch local players")
+
             let players = PersistanceManager.shared.retrievePlayers()
             var albums: [WidgetCustom] = []
             for player in players {
@@ -29,11 +31,13 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
             completion(INObjectCollection(items: albums), nil)
         } else {
             print("Fetching network")
+            WorldCupAnalytics().reportAnalytics(location: "IntentHandler", data: "fetch network players")
 
             Firestore.firestore().collection("PlayerDatabase").getDocuments { querySnapshot, err in
                 var newPlayers: [Player] = []
                 if let err = err {
                     print(err);
+                    WorldCupAnalytics().reportError(location: "IntentHandler provideCustomConfigPlayerOptionsCollection", error: err.localizedDescription)
                     newPlayers = PersistanceManager.shared.retrievePlayers()
                 } else {
                     for document in querySnapshot!.documents {
@@ -63,6 +67,7 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
     }
 
     func provideCustomConfigCountryOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<WidgetCustom>?, Error?) -> Void) {
+        WorldCupAnalytics().reportAnalytics(location: "IntentHandler", data: "fetch countries")
         var albums: [WidgetCustom] = []
 
         for country in Country.allCases {

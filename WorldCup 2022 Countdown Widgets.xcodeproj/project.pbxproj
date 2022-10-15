@@ -37,6 +37,10 @@
 		6C626BBD28FB1C940002BA15 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6C626BBC28FB1C940002BA15 /* FirebaseFirestore */; };
 		6C626BBE28FB1CE30002BA15 /* WorldCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */; };
 		6C626BC028FB1FB10002BA15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C626BBF28FB1FB10002BA15 /* GoogleService-Info.plist */; };
+		6C626BC428FB2CD60002BA15 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BC328FB2CD60002BA15 /* Analytics.swift */; };
+		6C626BC528FB2FF90002BA15 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BC328FB2CD60002BA15 /* Analytics.swift */; };
+		6C626BC628FB2FFA0002BA15 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BC328FB2CD60002BA15 /* Analytics.swift */; };
+		6C626BC828FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6C626BC728FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		6C70D84B28EF575B0091BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */; };
 		6C70D84D28EF6B120091BD3C /* WorldCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */; };
 		6C70D85228EF74430091BD3C /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D85128EF74430091BD3C /* TimeView.swift */; };
@@ -126,6 +130,7 @@
 		6C626BB028FA08A60002BA15 /* WorldCupIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldCupIntent.entitlements; sourceTree = "<group>"; };
 		6C626BB228FA093E0002BA15 /* WidgetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetAPIManager.swift; sourceTree = "<group>"; };
 		6C626BBF28FB1FB10002BA15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "WorldCup 2022 Countdown Widgets/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6C626BC328FB2CD60002BA15 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupViewModel.swift; sourceTree = "<group>"; };
 		6C70D85128EF74430091BD3C /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
@@ -171,6 +176,7 @@
 				6C11694028F49437000A0D65 /* Intents.framework in Frameworks */,
 				6C626BB928FB14CE0002BA15 /* UserDefaultsStore in Frameworks */,
 				6C626BBD28FB1C940002BA15 /* FirebaseFirestore in Frameworks */,
+				6C626BC828FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +249,14 @@
 			path = ApiService;
 			sourceTree = "<group>";
 		};
+		6C626BC228FB2CC80002BA15 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				6C626BC328FB2CD60002BA15 /* Analytics.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		6C70D84F28EF74220091BD3C /* Containers */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +307,7 @@
 		6CFA736A28E9A4D300F9AF7B /* WorldCup 2022 Countdown Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				6C626BC228FB2CC80002BA15 /* Analytics */,
 				6C626BAE28FA086F0002BA15 /* WorldCup 2022 Countdown Widgets.entitlements */,
 				6C1168B928F31102000A0D65 /* WorldCup-2022-Countdown-Widgets-Info.plist */,
 				6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */,
@@ -425,6 +440,7 @@
 			packageProductDependencies = (
 				6C626BB828FB14CE0002BA15 /* UserDefaultsStore */,
 				6C626BBC28FB1C940002BA15 /* FirebaseFirestore */,
+				6C626BC728FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = WorldCupIntent;
 			productReference = 6C11693F28F49437000A0D65 /* WorldCupIntent.appex */;
@@ -606,6 +622,7 @@
 				6C11692E28F49301000A0D65 /* WorldCupCountdown.swift in Sources */,
 				6C626BB428FB0DA70002BA15 /* WidgetAPIManager.swift in Sources */,
 				6C626BB528FB142A0002BA15 /* PersistanceManager.swift in Sources */,
+				6C626BC628FB2FFA0002BA15 /* Analytics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C11694C28F4947F000A0D65 /* Teams.swift in Sources */,
+				6C626BC528FB2FF90002BA15 /* Analytics.swift in Sources */,
 				6C11694B28F49464000A0D65 /* WorldCupCountdown.intentdefinition in Sources */,
 				6C11694328F49437000A0D65 /* IntentHandler.swift in Sources */,
 				6C626BB728FB148B0002BA15 /* Player.swift in Sources */,
@@ -628,6 +646,7 @@
 			files = (
 				6C11695228F49E29000A0D65 /* WorldCupView.swift in Sources */,
 				6CA784E528F893DC003780CC /* CountdownHeaderView.swift in Sources */,
+				6C626BC428FB2CD60002BA15 /* Analytics.swift in Sources */,
 				6CFA73B828EE276000F9AF7B /* Teams.swift in Sources */,
 				6CA784E728F8940C003780CC /* SignatureWidgetHorizontalView.swift in Sources */,
 				6CA784E328F89302003780CC /* CountriesHorizontalView.swift in Sources */,
@@ -1162,6 +1181,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C1168CE28F48A74000A0D65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		6C626BC728FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C1168CE28F48A74000A0D65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 		6CA784CF28F88A2C003780CC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;

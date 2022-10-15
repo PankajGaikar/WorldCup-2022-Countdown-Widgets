@@ -47,6 +47,7 @@ class WorldCupViewModel: NSObject, ObservableObject {
         db.collection("PlayerDatabase").getDocuments { querySnapshot, err in
             if let err = err {
                 print(err);
+                WorldCupAnalytics().reportError(location: "WorldCupViewModel getPlayers", error: err.localizedDescription)
                 self.players = PersistanceManager.shared.retrievePlayers()
                 return
             }

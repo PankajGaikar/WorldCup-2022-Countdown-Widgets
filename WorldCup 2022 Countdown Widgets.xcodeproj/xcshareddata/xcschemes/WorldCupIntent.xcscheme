@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CFA739C28E9BC5100F9AF7B"
-               BuildableName = "WorldCup CountdownExtension.appex"
-               BlueprintName = "WorldCup CountdownExtension"
+               BlueprintIdentifier = "6C11693E28F49437000A0D65"
+               BuildableName = "WorldCupIntent.appex"
+               BlueprintName = "WorldCupIntent"
                ReferencedContainer = "container:WorldCup 2022 Countdown Widgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,28 +43,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CFA738128E9A4D500F9AF7B"
-               BuildableName = "WorldCup 2022 Countdown WidgetsUITests.xctest"
-               BlueprintName = "WorldCup 2022 Countdown WidgetsUITests"
-               ReferencedContainer = "container:WorldCup 2022 Countdown Widgets.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CFA737728E9A4D500F9AF7B"
-               BuildableName = "WorldCup 2022 Countdown WidgetsTests.xctest"
-               BlueprintName = "WorldCup 2022 Countdown WidgetsTests"
-               ReferencedContainer = "container:WorldCup 2022 Countdown Widgets.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -80,15 +58,9 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6CFA739C28E9BC5100F9AF7B"
-            BuildableName = "WorldCup CountdownExtension.appex"
-            BlueprintName = "WorldCup CountdownExtension"
-            ReferencedContainer = "container:WorldCup 2022 Countdown Widgets.xcodeproj">
-         </BuildableReference>
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.pankajgaikar.WorldCup-2022-Countdown-Widgets"
+         RemotePath = "/var/containers/Bundle/Application/57C7D767-92C0-473F-8819-940D04ADE962/WorldCup 2022 Countdown Widgets.app">
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
@@ -105,23 +77,6 @@
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "_XCWidgetKind"
-            value = ""
-            isEnabled = "NO">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "_XCWidgetDefaultView"
-            value = "timeline"
-            isEnabled = "NO">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "_XCWidgetFamily"
-            value = "medium"
-            isEnabled = "NO">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
