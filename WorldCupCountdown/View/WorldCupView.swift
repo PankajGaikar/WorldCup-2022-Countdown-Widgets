@@ -10,11 +10,11 @@ import SwiftUI
 struct WorldCupView: View {
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image("WorldCup_1024")
+            Image("WorldCup")
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                .background(Image("WorldCup_1024").resizable().scaledToFill())
+                .background(Image("WorldCup").resizable().scaledToFill())
 
             ZStack {
                 VStack {

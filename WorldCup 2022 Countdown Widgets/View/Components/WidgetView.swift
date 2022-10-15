@@ -51,6 +51,6 @@ struct ContentView_Previews_1: PreviewProvider {
 
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetView(imagePath: "WorldCup_1024")
+        WidgetView(imagePath: "WorldCup")
     }
 }

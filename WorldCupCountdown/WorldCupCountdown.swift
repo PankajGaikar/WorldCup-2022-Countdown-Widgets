@@ -12,6 +12,9 @@ import FirebaseCore
 import FirebaseAnalytics
 
 struct Provider: IntentTimelineProvider {
+
+    static let apiManager = WidgetAPIManager()
+
     func placeholder(in context: Context) -> WorldCupEntry {
         WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .worldCup)
     }
@@ -22,16 +25,32 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [WorldCupEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
-        var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
-        entry.imageName = configuration.country?.imageName
-        entries.append(entry)
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
+            var entries: [WorldCupEntry] = []
+
+            // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+            let currentDate = Date()
+            let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+            var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
+            entry.image = image
+            entries.append(entry)
+            let timeline = Timeline(entries: entries, policy: .atEnd)
+            completion(timeline)
+        }
+    }
+
+    func getImagePath(configuration: ConfigurationIntent) -> String {
+        switch configuration.widgetType {
+        case .country:
+            return configuration.customConfig?.imageName ?? ""
+        case .player:
+            return configuration.customConfig?.imageName ?? ""
+        case .worldCup:
+            return "WorldCup"
+        case .unknown:
+            return ""
+        }
     }
 }
 
@@ -39,23 +58,21 @@ struct WorldCupEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
     let widgetType: WidgetType
-    var imageName: String? = ""
+    var image: UIImage?
 }
 
 struct WorldCupCountdownEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        if entry.widgetType == .worldCup {
-            WorldCupView()
-        } else {
+        if let image = entry.image {
             ZStack(alignment: .bottomLeading) {
-                Image(getImageName())
+                Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                    .background(Image("WorldCup_1024").resizable().scaledToFill().overlay(Color.black.opacity(0.4)))
-                
+                    .background(Image("WorldCup").resizable().scaledToFill().overlay(Color.black.opacity(0.4)))
+
                 ZStack {
                     VStack {
                         Text("Time to WorldCup")
@@ -64,7 +81,7 @@ struct WorldCupCountdownEntryView : View {
                             .minimumScaleFactor(0.2)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
-                        
+
                         Text(WorldCupViewModel.shared.getTimeToWorldCup())
                             .font(.title)
                             .bold()
@@ -77,11 +94,9 @@ struct WorldCupCountdownEntryView : View {
                 }
                 .background(Color.black.opacity(0.4))
             }
+        } else {
+            WorldCupView()
         }
-    }
-
-    func getImageName() -> String {
-        entry.imageName ?? "WorldCup_1024"
     }
 }
 
@@ -107,40 +122,11 @@ struct WorldCupCountdown_Previews: PreviewProvider {
 
     static func getCountry() -> WorldCupEntry {
         var entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
-        entry.imageName = "esp"
         return entry
     }
 
     static var previews: some View {
         WorldCupCountdownEntryView(entry: getCountry())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
-
-struct WorldCupCountdown_Previews2: PreviewProvider {
-
-    static func getCountry() -> WorldCupEntry {
-        var entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
-        entry.imageName = "esp"
-        return entry
-    }
-
-    static var previews: some View {
-        WorldCupCountdownEntryView(entry: getCountry())
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-    }
-}
-
-struct WorldCupCountdown_Previews3: PreviewProvider {
-
-    static func getCountry() -> WorldCupEntry {
-        var entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
-        entry.imageName = "esp"
-        return entry
-    }
-
-    static var previews: some View {
-        WorldCupCountdownEntryView(entry: getCountry())
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
