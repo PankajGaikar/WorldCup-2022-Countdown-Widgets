@@ -149,15 +149,15 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Country</string>
+					<string>Custom Config</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>ygjsWv</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>2</integer>
 					<key>INIntentParameterName</key>
-					<string>country</string>
+					<string>customConfig</string>
 					<key>INIntentParameterObjectType</key>
-					<string>WidgetCountry</string>
+					<string>WidgetCustom</string>
 					<key>INIntentParameterObjectTypeNamespace</key>
 					<string>88xZPY</string>
 					<key>INIntentParameterPromptDialogs</key>
@@ -222,13 +222,13 @@
 	<array>
 		<dict>
 			<key>INTypeDisplayName</key>
-			<string>Widget Country</string>
+			<string>Widget Custom</string>
 			<key>INTypeDisplayNameID</key>
 			<string>KYP0sm</string>
 			<key>INTypeLastPropertyTag</key>
 			<integer>100</integer>
 			<key>INTypeName</key>
-			<string>WidgetCountry</string>
+			<string>WidgetCustom</string>
 			<key>INTypeProperties</key>
 			<array>
 				<dict>
