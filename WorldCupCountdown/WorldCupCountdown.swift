@@ -30,7 +30,7 @@ struct Provider: IntentTimelineProvider {
         WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
             var entries: [WorldCupEntry] = []
             let currentDate = Date()
-            let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+            let entryDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
             var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
             entry.image = image
             entries.append(entry)
@@ -74,14 +74,7 @@ struct WorldCupEntry: TimelineEntry {
 
 struct WorldCupCountdownEntryView : View {
     var entry: Provider.Entry
-
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "HH:mm"
-        return formatter
-    }()
-
+    
     var body: some View {
         if let image = entry.image {
             ZStack(alignment: .bottomLeading) {
@@ -100,7 +93,7 @@ struct WorldCupCountdownEntryView : View {
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
 
-                        Text(WorldCupViewModel.shared.getTimeToWorldCup())
+                        Text(WorldCupViewModel.getDate()!, style: .relative)
                             .font(.title)
                             .bold()
                             .minimumScaleFactor(0.2)
@@ -139,7 +132,7 @@ struct WorldCupCountdown: Widget {
 struct WorldCupCountdown_Previews: PreviewProvider {
 
     static func getCountry() -> WorldCupEntry {
-        let entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
+        let entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .worldCup)
         return entry
     }
 
