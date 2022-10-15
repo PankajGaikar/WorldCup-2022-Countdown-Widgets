@@ -33,7 +33,8 @@ struct HomeWidgetView: View {
                             .bold()
                             .minimumScaleFactor(0.2)
                             .lineLimit(1)
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .multilineTextAlignment(.center)
                             .padding(.horizontal, 5)
                             .foregroundColor(.white)
                     }

@@ -128,12 +128,13 @@ struct WorldCupCountdown: Widget {
 struct WorldCupCountdown_Previews: PreviewProvider {
 
     static func getCountry() -> WorldCupEntry {
-        let entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .worldCup)
+        var entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
+        entry.image = UIImage(named: "WorldCup")
         return entry
     }
 
     static var previews: some View {
         WorldCupCountdownEntryView(entry: getCountry())
-            .previewContext(WidgetPreviewContext(family: .accessoryInline))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
