@@ -20,16 +20,15 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WorldCupEntry) -> ()) {
+        WorldCupAnalytics().reportAnalytics(location: "Provider", data: "getSnapshot")
         let entry = WorldCupEntry(date: Date(), configuration: configuration, widgetType: .worldCup)
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-
+        reportAnalytics(configuration: configuration)
         WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
             var entries: [WorldCupEntry] = []
-
-            // Generate a timeline consisting of five entries an hour apart, starting from the current date.
             let currentDate = Date()
             let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
             var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
@@ -50,6 +49,18 @@ struct Provider: IntentTimelineProvider {
             return "WorldCup"
         case .unknown:
             return ""
+        }
+    }
+
+    func reportAnalytics(configuration: ConfigurationIntent) {
+        switch configuration.widgetType {
+        case .country:
+            WorldCupAnalytics().reportAnalytics(location: "widget_country", data: configuration.customConfigCountry?.imageName ?? "")
+        case .player:
+            WorldCupAnalytics().reportAnalytics(location: "widget_player", data: configuration.customConfigPlayer?.imageName ?? "")
+        case .worldCup:
+            WorldCupAnalytics().reportAnalytics(location: "widget_player", data: "WorldCup")
+        case .unknown: break
         }
     }
 }
@@ -121,7 +132,7 @@ struct WorldCupCountdown: Widget {
 struct WorldCupCountdown_Previews: PreviewProvider {
 
     static func getCountry() -> WorldCupEntry {
-        var entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
+        let entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .country)
         return entry
     }
 
