@@ -27,7 +27,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>world cup</string>
+					<string>WorldCup</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CKREHa</string>
 					<key>INEnumValueIndex</key>
@@ -37,7 +37,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>country</string>
+					<string>Country</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>yzHFd3</string>
 					<key>INEnumValueIndex</key>
@@ -47,7 +47,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>player</string>
+					<string>Player</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>gtDOx4</string>
 					<key>INEnumValueIndex</key>
