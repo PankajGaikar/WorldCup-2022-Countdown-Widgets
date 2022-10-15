@@ -29,8 +29,7 @@ struct Provider: IntentTimelineProvider {
         reportAnalytics(configuration: configuration)
         WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
             var entries: [WorldCupEntry] = []
-            let currentDate = Date()
-            let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+            let entryDate = Calendar.current.nextDate(after:  Date(), matching: DateComponents(minute: 0), matchingPolicy: .strict)!
             var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
             entry.image = image
             entries.append(entry)
@@ -74,7 +73,14 @@ struct WorldCupEntry: TimelineEntry {
 
 struct WorldCupCountdownEntryView : View {
     var entry: Provider.Entry
-    
+
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
+
     var body: some View {
         if let image = entry.image {
             ZStack(alignment: .bottomLeading) {

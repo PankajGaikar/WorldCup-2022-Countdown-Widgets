@@ -33,6 +33,7 @@ class WorldCupViewModel: NSObject, ObservableObject {
         _ = self.timer
         getPlayers()
 
+        print("Next = \(Calendar.current.nextDate(after:  Date(), matching: DateComponents(minute: 0), matchingPolicy: .strict)!)")
     }
 
     func getPlayers() {
