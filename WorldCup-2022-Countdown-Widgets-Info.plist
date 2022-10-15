@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>INIntentsSupported</key>
-	<array>
-		<string>IntentHandler</string>
-	</array>
+	<array/>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ConfigurationIntent</string>
