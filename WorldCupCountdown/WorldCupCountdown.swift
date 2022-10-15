@@ -27,16 +27,25 @@ struct Provider: IntentTimelineProvider {
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         reportAnalytics(configuration: configuration)
-        WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
-            var entries: [WorldCupEntry] = []
-            let currentDate = Date()
-            let entryDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
-            var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
-            entry.image = image
-            entries.append(entry)
-            let timeline = Timeline(entries: entries, policy: .atEnd)
-            completion(timeline)
-        }
+        var entries: [WorldCupEntry] = []
+        let currentDate = Date()
+        let entryDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
+        var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
+//        entry.image = image
+        entries.append(entry)
+        let timeline = Timeline(entries: entries, policy: .atEnd)
+        completion(timeline)
+
+//        WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
+//            var entries: [WorldCupEntry] = []
+//            let currentDate = Date()
+//            let entryDate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
+//            var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
+//            entry.image = image
+//            entries.append(entry)
+//            let timeline = Timeline(entries: entries, policy: .atEnd)
+//            completion(timeline)
+//        }
     }
 
     func getImagePath(configuration: ConfigurationIntent) -> String {
@@ -74,39 +83,15 @@ struct WorldCupEntry: TimelineEntry {
 
 struct WorldCupCountdownEntryView : View {
     var entry: Provider.Entry
-    
+    @Environment(\.widgetFamily) private var family
+
     var body: some View {
-        if let image = entry.image {
-            ZStack(alignment: .bottomLeading) {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                    .background(Image("WorldCup").resizable().scaledToFill().overlay(Color.black.opacity(0.4)))
-
-                ZStack {
-                    VStack {
-                        Text("Time to WorldCup")
-                            .font(.body)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.2)
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(.white)
-
-                        Text(WorldCupViewModel.getDate()!, style: .relative)
-                            .font(.title)
-                            .bold()
-                            .minimumScaleFactor(0.2)
-                            .lineLimit(1)
-                            .frame(maxWidth: .infinity)
-                            .padding(.horizontal, 5)
-                            .foregroundColor(.white)
-                    }
-                }
-                .background(Color.black.opacity(0.4))
-            }
+        if family == .accessoryRectangular {
+            AccessoryRectangularView()
+        } else if family == .accessoryInline {
+            AccessoryInlineView()
         } else {
-            WorldCupView()
+            HomeWidgetView(entry: entry)
         }
     }
 }
@@ -114,6 +99,25 @@ struct WorldCupCountdownEntryView : View {
 @main
 struct WorldCupCountdown: Widget {
     let kind: String = "WorldCupCountdown"
+    private var supportedFamilies: [WidgetFamily] {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return [
+                .systemSmall,
+                .systemMedium,
+                .systemLarge,
+                .systemExtraLarge,
+                .accessoryRectangular,
+                .accessoryInline
+            ]
+        } else {
+            return [
+                .systemSmall,
+                .systemMedium,
+                .systemLarge,
+                .systemExtraLarge
+            ]
+        }
+    }
 
     init() {
         FirebaseApp.configure()
@@ -126,6 +130,7 @@ struct WorldCupCountdown: Widget {
         }
         .configurationDisplayName("Qatar WorldCup Countdown Widgets")
         .description("Select from your country's flags, favorite players to setup widgets for upcoming WorldCup!.")
+        .supportedFamilies(supportedFamilies)
     }
 }
 
@@ -138,6 +143,6 @@ struct WorldCupCountdown_Previews: PreviewProvider {
 
     static var previews: some View {
         WorldCupCountdownEntryView(entry: getCountry())
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .accessoryInline))
     }
 }
