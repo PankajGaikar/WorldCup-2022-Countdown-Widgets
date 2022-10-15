@@ -25,10 +25,10 @@ struct WorldCupView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
 
-                    Text(WorldCupViewModel.shared.getTimeToWorldCup())
+                    Text(WorldCupViewModel.getDate()!, style: .relative)
                         .font(.title)
                         .bold()
-                        .minimumScaleFactor(0.2)
+                        .minimumScaleFactor(0.1)
                         .lineLimit(1)
                         .frame(maxWidth: .infinity)
                         .padding(.horizontal, 5)
