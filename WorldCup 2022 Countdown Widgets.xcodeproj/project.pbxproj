@@ -41,6 +41,9 @@
 		6C626BC528FB2FF90002BA15 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BC328FB2CD60002BA15 /* Analytics.swift */; };
 		6C626BC628FB2FFA0002BA15 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BC328FB2CD60002BA15 /* Analytics.swift */; };
 		6C626BC828FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6C626BC728FB301C0002BA15 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		6C626BCB28FB5F610002BA15 /* HomeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BC928FB5F340002BA15 /* HomeWidgetView.swift */; };
+		6C626BCE28FB63930002BA15 /* AccessoryRectangularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BCC28FB636E0002BA15 /* AccessoryRectangularView.swift */; };
+		6C626BD028FB65B50002BA15 /* AccessoryInlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C626BCF28FB65B50002BA15 /* AccessoryInlineView.swift */; };
 		6C70D84B28EF575B0091BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */; };
 		6C70D84D28EF6B120091BD3C /* WorldCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */; };
 		6C70D85228EF74430091BD3C /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C70D85128EF74430091BD3C /* TimeView.swift */; };
@@ -131,6 +134,9 @@
 		6C626BB228FA093E0002BA15 /* WidgetAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetAPIManager.swift; sourceTree = "<group>"; };
 		6C626BBF28FB1FB10002BA15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "WorldCup 2022 Countdown Widgets/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6C626BC328FB2CD60002BA15 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		6C626BC928FB5F340002BA15 /* HomeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetView.swift; sourceTree = "<group>"; };
+		6C626BCC28FB636E0002BA15 /* AccessoryRectangularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryRectangularView.swift; sourceTree = "<group>"; };
+		6C626BCF28FB65B50002BA15 /* AccessoryInlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryInlineView.swift; sourceTree = "<group>"; };
 		6C70D84A28EF575A0091BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C70D84C28EF6B120091BD3C /* WorldCupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupViewModel.swift; sourceTree = "<group>"; };
 		6C70D85128EF74430091BD3C /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
@@ -237,6 +243,9 @@
 			isa = PBXGroup;
 			children = (
 				6C11695128F49E29000A0D65 /* WorldCupView.swift */,
+				6C626BC928FB5F340002BA15 /* HomeWidgetView.swift */,
+				6C626BCC28FB636E0002BA15 /* AccessoryRectangularView.swift */,
+				6C626BCF28FB65B50002BA15 /* AccessoryInlineView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -614,13 +623,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C626BCE28FB63930002BA15 /* AccessoryRectangularView.swift in Sources */,
 				6C11694E28F49626000A0D65 /* Teams.swift in Sources */,
 				6C11693328F49302000A0D65 /* WorldCupCountdown.intentdefinition in Sources */,
+				6C626BD028FB65B50002BA15 /* AccessoryInlineView.swift in Sources */,
 				6C11695328F49E78000A0D65 /* WorldCupView.swift in Sources */,
 				6C11694F28F49626000A0D65 /* WorldCupViewModel.swift in Sources */,
 				6CA784DF28F8918D003780CC /* Player.swift in Sources */,
 				6C11692E28F49301000A0D65 /* WorldCupCountdown.swift in Sources */,
 				6C626BB428FB0DA70002BA15 /* WidgetAPIManager.swift in Sources */,
+				6C626BCB28FB5F610002BA15 /* HomeWidgetView.swift in Sources */,
 				6C626BB528FB142A0002BA15 /* PersistanceManager.swift in Sources */,
 				6C626BC628FB2FFA0002BA15 /* Analytics.swift in Sources */,
 			);
