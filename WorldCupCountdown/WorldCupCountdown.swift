@@ -124,8 +124,8 @@ struct WorldCupCountdown: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WorldCupCountdownEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Qatar WorldCup Countdown Widgets")
+        .description("Select from your country's flags, favorite players to setup widgets for upcoming WorldCup!.")
     }
 }
 
