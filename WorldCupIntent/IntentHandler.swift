@@ -8,7 +8,18 @@
 import Intents
 
 class IntentHandler: INExtension, ConfigurationIntentHandling {
-    func provideCustomConfigOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<WidgetCustom>?, Error?) -> Void) {
+    func provideCustomConfigPlayerOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<WidgetCustom>?, Error?) -> Void) {
+        var albums: [WidgetCustom] = []
+        let players = PersistanceManager.shared.retrievePlayers()
+        for player in players {
+            let widgetCountry = WidgetCustom(identifier: player.id, display: player.name, pronunciationHint: player.name)
+            widgetCountry.imageName = player.imagePath
+            albums.append(widgetCountry)
+        }
+        completion(INObjectCollection(items: albums), nil)
+    }
+    
+    func provideCustomConfigCountryOptionsCollection(for intent: ConfigurationIntent, with completion: @escaping (INObjectCollection<WidgetCustom>?, Error?) -> Void) {
         var albums: [WidgetCustom] = []
 
         for country in Country.allCases {
