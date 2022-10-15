@@ -12,12 +12,14 @@ struct RootContainerView: View {
     @ObservedObject var viewModel = WorldCupViewModel.shared
 
     var body: some View {
+        NavigationView {
             ScrollView {
                 VStack {
                     CountdownHeaderView()
                     SignatureWidgetHorizontalView()
                     PlayersHorizontalView()
                     CountriesHorizontalView()
+                    AppInfoView()
                     Spacer()
                 }
             }
@@ -25,6 +27,7 @@ struct RootContainerView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea())
+        }
     }
 }
 
