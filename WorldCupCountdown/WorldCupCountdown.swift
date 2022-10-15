@@ -29,7 +29,8 @@ struct Provider: IntentTimelineProvider {
         reportAnalytics(configuration: configuration)
         WidgetAPIManager().downloadImage(from: getImagePath(configuration: configuration)) { image in
             var entries: [WorldCupEntry] = []
-            let entryDate = Calendar.current.nextDate(after:  Date(), matching: DateComponents(minute: 0), matchingPolicy: .strict)!
+            let currentDate = Date()
+            let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
             var entry = WorldCupEntry(date: entryDate, configuration: configuration, widgetType: configuration.widgetType)
             entry.image = image
             entries.append(entry)
