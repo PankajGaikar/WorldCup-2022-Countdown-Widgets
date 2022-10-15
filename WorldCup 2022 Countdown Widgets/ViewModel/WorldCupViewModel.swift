@@ -36,12 +36,23 @@ class WorldCupViewModel: NSObject, ObservableObject {
     }
 
     func getPlayers() {
+        if PersistanceManager.shared.retrievePlayers().count > 0 {
+            players = PersistanceManager.shared.retrievePlayers()
+            return
+        }
         var newPlayers: [Player] = []
         db.collection("PlayerDatabase").getDocuments { querySnapshot, err in
             if let err = err { print(err); return }
             for document in querySnapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
-                newPlayers.append(Player(id: document.documentID, name: document["name"] as! String, countryCode: document["countryCode"] as! String, imagePath: document["imagePath"] as! String, country: document["country"] as! String, rank: document["rank"] as! Int))
+                let player = Player(id: document.documentID,
+                                    name: document["name"] as! String,
+                                    countryCode: document["countryCode"] as! String,
+                                    imagePath: document["imagePath"] as! String,
+                                    country: document["country"] as! String,
+                                    rank: document["rank"] as! Int)
+                newPlayers.append(player)
+                PersistanceManager.shared.store(player: player)
             }
             print(newPlayers)
             self.players = newPlayers.sorted(by: { $0.rank < $1.rank })
@@ -62,11 +73,7 @@ class WorldCupViewModel: NSObject, ObservableObject {
             .dateComponents([.day, .hour, .minute, .second],
                             from: nowDate,
                             to: referenceDate)
-        self.timeToWorldCup = components//String(format: "%02d DAYS%02d HOURS%02d MINUTES%02d SECONDS",
-//                      components.day ?? 00,
-//                      components.hour ?? 00,
-//                      components.minute ?? 00,
-//                      components.second ?? 00)
+        self.timeToWorldCup = components
     }
 
     func getTimeToWorldCup() -> String {

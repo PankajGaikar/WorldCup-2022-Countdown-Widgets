@@ -43,9 +43,9 @@ struct Provider: IntentTimelineProvider {
     func getImagePath(configuration: ConfigurationIntent) -> String {
         switch configuration.widgetType {
         case .country:
-            return configuration.customConfig?.imageName ?? ""
+            return configuration.customConfigCountry?.imageName ?? ""
         case .player:
-            return configuration.customConfig?.imageName ?? ""
+            return configuration.customConfigPlayer?.imageName ?? ""
         case .worldCup:
             return "WorldCup"
         case .unknown:
