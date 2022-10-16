@@ -4,6 +4,8 @@
 <dict>
 	<key>INIntentsSupported</key>
 	<array/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ConfigurationIntent</string>
