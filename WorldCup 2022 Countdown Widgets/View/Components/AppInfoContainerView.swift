@@ -84,13 +84,13 @@ struct AppInfoContainerView: View {
                 Spacer()
                     .frame(height: 20)
 
-                Text("Feeling extra generous?")
-                    .font(.title3)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                Text("Cash tips are more than welcome.")
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                //                Text("Feeling extra generous?")
+                //                    .font(.title3)
+                //                    .multilineTextAlignment(.leading)
+                //                    .frame(maxWidth: .infinity, alignment: .leading)
+                //
+                //                Text("Cash tips are more than welcome.")
+                //                    .frame(maxWidth: .infinity, alignment: .leading)
 
                 Spacer()
             }
@@ -105,8 +105,10 @@ struct AppInfoContainerView: View {
                 Button("Done") {
                     self.presentationMode.wrappedValue.dismiss()
                 }
+                .foregroundColor(.white)
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

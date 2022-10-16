@@ -14,7 +14,7 @@ struct TimeView: View {
     var body: some View {
         VStack {
             Text(time)
-                .font(.title2)
+                .font(.largeTitle)
                 .bold()
 
             Text(unit)
