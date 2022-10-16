@@ -26,7 +26,8 @@ struct RootContainerView: View {
             .background(Image("background")
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea())
+                .ignoresSafeArea().overlay(Color.black.opacity(0.6)))
+            .ignoresSafeArea()
         }
         .navigationViewStyle(.stack)
     }

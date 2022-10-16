@@ -22,10 +22,7 @@ class PersistanceManager: NSObject, ObservableObject {
 
     func store(player: Player) {
         do {
-            var storedPhotos = photoStore.allObjects()
-            var photoToStore = player
-            storedPhotos.append(photoToStore)
-            try photoStore.save(storedPhotos)
+            try photoStore.save(player)
         } catch let error {
             print("Oh No, failed to save. \(error.localizedDescription)")
         }
@@ -36,7 +33,7 @@ class PersistanceManager: NSObject, ObservableObject {
     }
 
     func retrievePlayers() -> [Player] {
-        return photoStore.allObjects()
+        return photoStore.allObjects().sorted(by: { $0.rank < $1.rank })
     }
 
 }
