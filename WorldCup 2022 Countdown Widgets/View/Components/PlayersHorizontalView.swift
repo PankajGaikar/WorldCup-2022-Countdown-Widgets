@@ -37,6 +37,8 @@ struct PlayersHorizontalView: View {
                             .foregroundColor(.white)
                             .padding()
                             .frame(maxWidth: .infinity)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
                             .background(Color.black.opacity(0.2))
                             .cornerRadius(10)
                     }
