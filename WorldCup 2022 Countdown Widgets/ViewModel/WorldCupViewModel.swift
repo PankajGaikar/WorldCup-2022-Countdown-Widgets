@@ -75,9 +75,10 @@ class WorldCupViewModel: NSObject, ObservableObject {
     static func getDate() -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        dateFormatter.timeZone = TimeZone(abbreviation: "CEST")
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         dateFormatter.locale = Locale.current
-        return dateFormatter.date(from: "2022-11-20T18:00:00")
+        let date = dateFormatter.date(from: "2022-11-20T16:00:00")
+        return date
     }
 
     func countDownString() {
