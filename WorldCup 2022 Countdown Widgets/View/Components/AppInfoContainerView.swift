@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppInfoContainerView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         NavigationView {
@@ -103,7 +103,7 @@ struct AppInfoContainerView: View {
                 .overlay(Color.black.opacity(0.5)))
             .toolbar {
                 Button("Done") {
-                    dismiss()
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             }
         }
