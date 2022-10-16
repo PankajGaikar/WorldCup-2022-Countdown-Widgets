@@ -46,7 +46,27 @@ struct AppInfoContainerView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(Color.black.opacity(0.5))
                 .cornerRadius(10)
+                .onTapGesture {
+                    let screenName =  "MePankajGaikar"
+                    let appURL = URL(string: "twitter://user?screen_name=\(screenName)")!
+                    let webURL = URL(string: "https://twitter.com/\(screenName)")!
 
+                    if UIApplication.shared.canOpenURL(appURL as URL) {
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(appURL)
+                        } else {
+                            UIApplication.shared.openURL(appURL)
+                        }
+                    } else {
+                        //redirect to safari because the user doesn't have Instagram
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(webURL)
+                        } else {
+                            UIApplication.shared.openURL(webURL)
+                        }
+                    }
+                }
+                
                 Spacer()
                     .frame(height: 20)
 
@@ -80,6 +100,11 @@ struct AppInfoContainerView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(Color.black.opacity(0.5))
                 .cornerRadius(10)
+                .onTapGesture {
+                    if let appUrl = URL(string: "https://apps.apple.com/us/app/worldcup-2022-countdown-widget/id6443645106") {
+                        UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
+                    }
+                }
 
                 Spacer()
                     .frame(height: 20)
