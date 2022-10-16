@@ -28,6 +28,7 @@ struct RootContainerView: View {
                 .scaledToFill()
                 .ignoresSafeArea())
         }
+        .navigationViewStyle(.stack)
     }
 }
 
