@@ -52,16 +52,20 @@ class WorldCupViewModel: NSObject, ObservableObject {
             }
             for document in querySnapshot!.documents {
                 print("\(document.documentID) => \(document.data())")
+                guard let name = document["name"] as? String,
+                      let imagePath = document["imagePath"] as? String else { WorldCupAnalytics().reportError(location: "WorldCupViewModel getPlayers", error: "Missing info for \(document.documentID)"); continue }
+
                 let player = Player(id: document.documentID,
-                                    name: document["name"] as! String,
-                                    countryCode: document["countryCode"] as! String,
-                                    imagePath: document["imagePath"] as! String,
-                                    country: document["country"] as! String,
-                                    rank: document["rank"] as! Int)
+                                    name: name,
+                                    countryCode: document["countryCode"] as? String,
+                                    imagePath: imagePath,
+                                    country: document["country"] as? String,
+                                    rank: document["rank"] as? Int)
+
                 newPlayers.append(player)
                 PersistanceManager.shared.store(player: player)
             }
-            self.players = newPlayers.sorted(by: { $0.rank < $1.rank })
+            self.players = newPlayers.sorted(by: { $0.rank ?? 10 < $1.rank ?? 10 })
             UserDefaults(suiteName: PersistanceManager.SHARED_APP_GROUP_KEY)!.setValue(Date(), forKey: WorldCupViewModel.LAST_NETWORK_FETCH)
             UserDefaults(suiteName: PersistanceManager.SHARED_APP_GROUP_KEY)!.synchronize()
         }

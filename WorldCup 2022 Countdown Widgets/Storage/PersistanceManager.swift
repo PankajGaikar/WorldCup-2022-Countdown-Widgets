@@ -33,7 +33,7 @@ class PersistanceManager: NSObject, ObservableObject {
     }
 
     func retrievePlayers() -> [Player] {
-        return photoStore.allObjects().sorted(by: { $0.rank < $1.rank })
+        return photoStore.allObjects().sorted(by: { $0.rank ?? 10 < $1.rank ?? 10 })
     }
 
 }

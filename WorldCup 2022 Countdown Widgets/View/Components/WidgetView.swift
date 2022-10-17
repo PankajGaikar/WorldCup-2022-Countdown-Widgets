@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Shimmer
 
 struct WidgetView: View {
 
@@ -16,6 +17,12 @@ struct WidgetView: View {
         ZStack(alignment: .bottomLeading) {
             WebImage(url: URL(string: "https://github.com/PankajGaikar/Storage/blob/main/\(imagePath).jpg?raw=true"))
                 .resizable()
+                .placeholder(content: {
+                    Image("WorldCup")
+                        .resizable()
+                        .shimmering()
+
+                })
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
             ZStack {
@@ -27,7 +34,7 @@ struct WidgetView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
 
-                    Text(WorldCupViewModel.shared.getTimeToWorldCup())
+                    Text(WorldCupViewModel.getDate()!, style: .relative)
                         .font(.title)
                         .bold()
                         .minimumScaleFactor(0.2)
