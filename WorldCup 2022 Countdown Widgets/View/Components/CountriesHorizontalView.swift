@@ -9,6 +9,8 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct CountriesHorizontalView: View {
+    private var isiPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+
     var body: some View {
         Text("Countries Widgets Preview - Countries")
             .font(.title3)
@@ -52,7 +54,7 @@ struct CountriesHorizontalView: View {
                             }
                             .background(Color.black.opacity(0.4))
                         }
-                        .frame(height: UIScreen.main.bounds.width / 2)
+                        .frame(height: getWidth())
                         .background(Color.black.opacity(0.4))
                         .cornerRadius(10)
 
@@ -65,11 +67,15 @@ struct CountriesHorizontalView: View {
                             .background(Color.black.opacity(0.2))
                             .cornerRadius(10)
                     }
-                    .frame(width: UIScreen.main.bounds.width / 2)
+                    .frame(width: getWidth())
                 }
             }
             .padding(.leading)
         }
+    }
+
+    func getWidth() -> CGFloat {
+        isiPad ? UIScreen.main.bounds.width / 5 : UIScreen.main.bounds.width / 2
     }
 }
 
