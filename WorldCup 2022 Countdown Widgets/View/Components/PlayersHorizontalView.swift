@@ -10,6 +10,7 @@ import SDWebImageSwiftUI
 
 struct PlayersHorizontalView: View {
     @ObservedObject var viewModel = WorldCupViewModel.shared
+    private var isiPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
 
     var body: some View {
         Text("Players Widgets Preview - Countries")
@@ -28,7 +29,7 @@ struct PlayersHorizontalView: View {
 
                     VStack {
                         WidgetView(imagePath: player.imagePath)
-                            .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
+                            .frame(width: getWidth(), height: getWidth())
                         .cornerRadius(10)
 
                         Text(player.name)
@@ -42,12 +43,16 @@ struct PlayersHorizontalView: View {
                             .background(Color.black.opacity(0.2))
                             .cornerRadius(10)
                     }
-                    .frame(width: UIScreen.main.bounds.width / 2)
+                    .frame(width: getWidth())
                 }
 
             }
             .padding(.leading)
         }
+    }
+
+    func getWidth() -> CGFloat {
+        isiPad ? UIScreen.main.bounds.width / 5 : UIScreen.main.bounds.width / 2
     }
 }
 
