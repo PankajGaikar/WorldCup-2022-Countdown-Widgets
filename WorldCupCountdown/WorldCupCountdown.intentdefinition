@@ -73,6 +73,8 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Configure your widget.</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -149,7 +151,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Custom Config Country</string>
+					<string>Configure Country</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>ygjsWv</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -195,7 +197,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Custom Config Player</string>
+					<string>Configure Player</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>D9W9n9</string>
 					<key>INIntentParameterDisplayPriority</key>
