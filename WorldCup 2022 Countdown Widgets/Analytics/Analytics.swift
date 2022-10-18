@@ -11,16 +11,17 @@ import FirebaseAnalytics
 struct WorldCupAnalytics {
     func reportAnalytics(location: String, data: String) {
         let concatedString = location.lowercased().replacingOccurrences(of: " ", with: "_")
-        let userDefaultsString = concatedString + data.lowercased().replacingOccurrences(of: " ", with: "_")
+        let userDefaultsString = concatedString + "_" + data.lowercased().replacingOccurrences(of: " ", with: "_")
         guard hasReportedAlready(report: userDefaultsString) == false else {
             return
         }
         storeReportLocally(report: userDefaultsString)
-        Analytics.logEvent(concatedString, parameters: ["data": data])
+        Analytics.logEvent(userDefaultsString, parameters: ["data": data])
     }
 
     func reportError(location: String, error: String) {
-        Analytics.logEvent("error", parameters: [location: error])
+        let error = "error" + "_" + error.lowercased().replacingOccurrences(of: " ", with: "_")
+        Analytics.logEvent(error, parameters: [location: error])
     }
 
     func storeReportLocally(report: String) {
