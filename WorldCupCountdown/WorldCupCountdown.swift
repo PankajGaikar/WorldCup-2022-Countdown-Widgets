@@ -59,7 +59,7 @@ struct Provider: IntentTimelineProvider {
         case .player:
             WorldCupAnalytics().reportAnalytics(location: "widget_player", data: configuration.customConfigPlayer?.imageName ?? "")
         case .worldCup:
-            WorldCupAnalytics().reportAnalytics(location: "widget_player", data: "WorldCup")
+            WorldCupAnalytics().reportAnalytics(location: "widget_signature", data: "WorldCup")
         case .unknown: break
         }
     }
