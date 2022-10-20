@@ -73,6 +73,15 @@
       }
     },
     {
+      "identity" : "imagepickerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rebeloper/ImagePickerView.git",
+      "state" : {
+        "revision" : "8e72c67c10f23fe82235712fc6e1144cb8055363",
+        "version" : "0.2.2"
+      }
+    },
+    {
       "identity" : "leveldb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/leveldb.git",
@@ -133,6 +142,15 @@
       "state" : {
         "revision" : "61411771350a5a4e96666a8a202ae4b2be327a2b",
         "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "tocropviewcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TimOliver/TOCropViewController.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a942414508012b13102f776eb65dac655f31cabb"
       }
     },
     {
