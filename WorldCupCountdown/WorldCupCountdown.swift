@@ -46,7 +46,7 @@ struct Provider: IntentTimelineProvider {
         case .player:
             return configuration.customConfigPlayer?.imageName ?? ""
         case .worldCup:
-            return "WorldCup"
+            return "WorldCup2022"
         case .unknown:
             return ""
         }

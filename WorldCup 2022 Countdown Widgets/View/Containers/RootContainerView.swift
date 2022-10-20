@@ -56,7 +56,7 @@ struct RootContainerView: View {
                     } else {
                         CountdownHeaderView()
                     }
-                    SignatureWidgetHorizontalView()
+                    //SignatureWidgetHorizontalView()
                     PlayersHorizontalView()
                     CountriesHorizontalView()
                     AppInfoView()
