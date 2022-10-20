@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import ImagePickerView
 
 struct CustomWidgetButton: View {
     private var isiPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+    @State var isImagePickerViewPresented = false
+    @State private var showImageCropper = false
+    @State var imagePicked: UIImage?
 
     var body: some View {
         VStack {
@@ -45,6 +49,33 @@ struct CustomWidgetButton: View {
         }
         .frame(width: getWidth())
         .contentShape(Rectangle())
+        .onTapGesture {
+            isImagePickerViewPresented = true
+        }
+        .sheet(isPresented: $isImagePickerViewPresented) {
+            // filter default is .images; please DO NOT CHOOSE .videos
+            // selectionLimit default is 1; set to 0 to have unlimited selection
+            ImagePickerView(filter: .any(of: [.images, .livePhotos]), selectionLimit: 1, delegate: ImagePickerView.Delegate(isPresented: $isImagePickerViewPresented, didCancel: { (phPickerViewController) in
+                print("Did Cancel: \(phPickerViewController)")
+            }, didSelect: { (result) in
+                let phPickerViewController = result.picker
+                let images = result.images
+                print("Did Select images: \(images) from \(phPickerViewController)")
+                self.imagePicked = result.images.first
+                DispatchQueue.global().asyncAfter(deadline: .now() + 0.5, execute: {
+                    self.showImageCropper = true
+                })
+            }, didFail: { (imagePickerError) in
+                let phPickerViewController = imagePickerError.picker
+                let error = imagePickerError.error
+                print("Did Fail with error: \(error) in \(phPickerViewController)")
+            }))
+        }
+        .sheet(isPresented: $showImageCropper) {
+            ImageCropViewController(onImageCropped: { image in
+
+            }, image: $imagePicked, viewerShown: $showImageCropper)
+        }
     }
 
     func getWidth() -> CGFloat {
