@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CountdownHeaderView: View {
+struct CountdownHeaderView_iPhone: View {
     @ObservedObject var viewModel = WorldCupViewModel.shared
 
     var body: some View {
