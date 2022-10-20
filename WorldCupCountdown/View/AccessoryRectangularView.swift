@@ -11,7 +11,7 @@ struct AccessoryRectangularView: View {
     var body: some View {
         GeometryReader { geometry in
             HStack {
-                Image("worldcup_icon")
+                Image("WorldCup")
                     .resizable()
                     .scaledToFit()
                     .frame(width: geometry.size.width * 0.2)

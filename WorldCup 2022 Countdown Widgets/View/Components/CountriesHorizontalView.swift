@@ -30,6 +30,12 @@ struct CountriesHorizontalView: View {
                         ZStack(alignment: .bottomLeading) {
                             WebImage(url: URL(string: "https://github.com/PankajGaikar/Storage/blob/main/\(country.getImageName()).jpg?raw=true"))
                                 .resizable()
+                                .placeholder(content: {
+                                    Image("WorldCup")
+                                        .resizable()
+                                        .shimmering()
+
+                                })
                                 .scaledToFit()
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
