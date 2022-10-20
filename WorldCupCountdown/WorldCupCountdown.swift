@@ -77,10 +77,14 @@ struct WorldCupCountdownEntryView : View {
     @Environment(\.widgetFamily) private var family
 
     var body: some View {
-        if family == .accessoryRectangular {
-            AccessoryRectangularView()
-        } else if family == .accessoryInline {
-            AccessoryInlineView()
+        if #available(iOSApplicationExtension 16.0, *) {
+            if family == .accessoryRectangular {
+                AccessoryRectangularView()
+            } else if family == .accessoryInline {
+                AccessoryInlineView()
+            } else {
+                HomeWidgetView(entry: entry)
+            }
         } else {
             HomeWidgetView(entry: entry)
         }
@@ -100,12 +104,18 @@ struct WorldCupCountdown: Widget {
                 .accessoryRectangular,
                 .accessoryInline
             ]
-        } else {
+        } else if #available(iOSApplicationExtension 16.0, *) {
             return [
                 .systemSmall,
                 .systemMedium,
                 .systemLarge,
                 .systemExtraLarge
+            ]
+        } else {
+            return [
+                .systemSmall,
+                .systemMedium,
+                .systemLarge
             ]
         }
     }
