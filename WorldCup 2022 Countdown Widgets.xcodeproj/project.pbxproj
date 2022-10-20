@@ -107,7 +107,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		6CFA73B228E9BC5400F9AF7B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -755,6 +755,7 @@
 				INFOPLIST_FILE = WorldCupCountdown/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorldCupCountdown;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,6 +784,7 @@
 				INFOPLIST_FILE = WorldCupCountdown/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorldCupCountdown;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -809,6 +811,7 @@
 				INFOPLIST_FILE = WorldCupIntent/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorldCupIntent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -835,6 +838,7 @@
 				INFOPLIST_FILE = WorldCupIntent/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WorldCupIntent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct HomeWidgetView: View {
     var entry: WorldCupEntry
@@ -44,5 +45,19 @@ struct HomeWidgetView: View {
         } else {
             WorldCupView()
         }
+    }
+}
+
+struct WorldCupCountdown_Previews1: PreviewProvider {
+
+    static func getCountry() -> WorldCupEntry {
+        var entry = WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .worldCup)
+        entry.image = UIImage(named: "WorldCup")
+        return entry
+    }
+
+    static var previews: some View {
+        HomeWidgetView(entry: getCountry())
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
