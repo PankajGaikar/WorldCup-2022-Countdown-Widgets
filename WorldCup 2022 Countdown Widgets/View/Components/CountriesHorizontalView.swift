@@ -28,37 +28,36 @@ struct CountriesHorizontalView: View {
 
                     VStack {
                         ZStack(alignment: .bottomLeading) {
-                            WebImage(url: URL(string: "https://github.com/PankajGaikar/Storage/blob/main/\(country.getImageName()).jpg?raw=true"))
-                                .resizable()
-                                .placeholder(content: {
-                                    Image("WorldCup")
-                                        .resizable()
-                                        .shimmering()
+                            VStack {
+                                WebImage(url: URL(string: "https://github.com/PankajGaikar/Storage/blob/main/\(country.getImageName()).jpg?raw=true"))
+                                    .resizable()
+                                    .placeholder(content: {
+                                        Image("WorldCup")
+                                            .resizable()
+                                            .shimmering()
 
-                                })
-                                .scaledToFit()
-                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                                    })
+                                    .scaledToFill()
 
-                            ZStack {
                                 VStack {
                                     Text("Time to WorldCup")
-                                        .font(.body)
+                                        .font(.title2)
                                         .lineLimit(1)
                                         .minimumScaleFactor(0.2)
                                         .frame(maxWidth: .infinity)
-                                        .foregroundColor(.white)
 
-                                    Text(WorldCupViewModel.shared.getTimeToWorldCup())
-                                        .font(.title)
+                                    Text(WorldCupViewModel.getDate()!, style: .relative)
+                                        .font(.largeTitle)
                                         .bold()
                                         .minimumScaleFactor(0.2)
                                         .lineLimit(1)
-                                        .frame(maxWidth: .infinity)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .multilineTextAlignment(.center)
                                         .padding(.horizontal, 5)
-                                        .foregroundColor(.white)
                                 }
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 10)
                             }
-                            .background(Color.black.opacity(0.4))
                         }
                         .frame(height: getWidth())
                         .background(Color.black.opacity(0.4))
