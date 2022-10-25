@@ -21,25 +21,7 @@ struct RootContainerView: View {
                     } else {
                         CountdownHeaderView_iPhone()
                     }
-                    //SignatureWidgetHorizontalView()
-                    VStack {
-                        Text("Your Custom Widgets")
-                            .font(.title3)
-                            .bold()
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.5)
-                            .padding()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(.white)
-                            .background(Color.black.opacity(0.5))
-                        ScrollView(.horizontal) {
-                            HStack {
-                                CustomWidgetButton()
-                            }
-                        }
-                    }
-                    .padding(.leading)
-                    
+                    SignatureWidgetHorizontalView()
                     PlayersHorizontalView()
                     CountriesHorizontalView()
                     AppInfoView()
