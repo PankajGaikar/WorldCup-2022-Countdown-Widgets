@@ -16,7 +16,7 @@ struct AccessoryRectangularView: View {
                     .scaledToFit()
                     .frame(width: geometry.size.width * 0.2)
                 VStack {
-                    Text("Time to WorldCup")
+                    Text("Time to Qatar 2022")
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                     Text(WorldCupViewModel.getDate()!, style: .relative)

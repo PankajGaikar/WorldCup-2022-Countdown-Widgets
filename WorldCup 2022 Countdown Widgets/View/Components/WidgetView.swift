@@ -27,7 +27,7 @@ struct WidgetView: View {
 
             ZStack {
                 VStack {
-                    Text("Time to WorldCup")
+                    Text("Time to Qatar 2022")
                         .font(.body)
                         .lineLimit(1)
                         .minimumScaleFactor(0.2)
