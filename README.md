@@ -16,15 +16,16 @@ Download this free app now and follow your team!
 
 # Images -
 ## Dark Mode -
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-1.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-2.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-3.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-4.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-5.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-6.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-1.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-2.png))
-![alt tag]([https://github.com/PankajGaikar/Instagram-SwiftUI/blob/main/Screenshots/IMG_1607.PNG](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-3.png))
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iphone-1.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iphone-2.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-3.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-4.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-5.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-6.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-1.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-2.png)
+![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-3.png)
+
 
 Keywords -
 SwiftUI, Lockscreen Widgets, Swift
