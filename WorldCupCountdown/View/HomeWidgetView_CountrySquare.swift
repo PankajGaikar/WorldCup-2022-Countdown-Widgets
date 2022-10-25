@@ -17,7 +17,7 @@ struct HomeWidgetView_CountrySquare: View {
                 .scaledToFill()
 
             VStack {
-                Text("Time to WorldCup")
+                Text("Time to Qatar 2022")
                     .font(.title2)
                     .lineLimit(1)
                     .minimumScaleFactor(0.2)

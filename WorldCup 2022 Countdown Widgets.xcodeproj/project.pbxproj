@@ -998,6 +998,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WorldCup-2022-Countdown-Widgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Qatar 2022 Countdown";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Description for photo access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1033,6 +1034,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WorldCup-2022-Countdown-Widgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Qatar 2022 Countdown";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Description for photo access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

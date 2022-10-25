@@ -27,13 +27,13 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>WorldCup</string>
+					<string>Qatar 2022 Signature Widget</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CKREHa</string>
 					<key>INEnumValueIndex</key>
 					<integer>1</integer>
 					<key>INEnumValueName</key>
-					<string>worldCup</string>
+					<string>qatar2022Trophy</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
@@ -63,7 +63,7 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>21G115</string>
+	<string>22A380</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
 	<string>14A400</string>
 	<key>INIntentDefinitionToolsVersion</key>
@@ -103,7 +103,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>worldCup</string>
+						<string>qatar2022Trophy</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>widgetType</string>

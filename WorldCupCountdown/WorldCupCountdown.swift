@@ -16,12 +16,12 @@ struct Provider: IntentTimelineProvider {
     static let apiManager = WidgetAPIManager()
 
     func placeholder(in context: Context) -> WorldCupEntry {
-        WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .worldCup)
+        WorldCupEntry(date: Date(), configuration: ConfigurationIntent(), widgetType: .qatar2022Trophy)
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WorldCupEntry) -> ()) {
         WorldCupAnalytics().reportAnalytics(location: "Provider", data: "getSnapshot")
-        let entry = WorldCupEntry(date: Date(), configuration: configuration, widgetType: .worldCup)
+        let entry = WorldCupEntry(date: Date(), configuration: configuration, widgetType: .qatar2022Trophy)
         completion(entry)
     }
 
@@ -45,7 +45,7 @@ struct Provider: IntentTimelineProvider {
             return configuration.customConfigCountry?.imageName ?? ""
         case .player:
             return configuration.customConfigPlayer?.imageName ?? ""
-        case .worldCup:
+        case .qatar2022Trophy:
             return "WorldCup2022"
         case .unknown:
             return ""
@@ -58,7 +58,7 @@ struct Provider: IntentTimelineProvider {
             WorldCupAnalytics().reportAnalytics(location: "widget_country", data: configuration.customConfigCountry?.imageName ?? "")
         case .player:
             WorldCupAnalytics().reportAnalytics(location: "widget_player", data: configuration.customConfigPlayer?.imageName ?? "")
-        case .worldCup:
+        case .qatar2022Trophy:
             WorldCupAnalytics().reportAnalytics(location: "widget_signature", data: "WorldCup")
         case .unknown: break
         }
@@ -129,8 +129,8 @@ struct WorldCupCountdown: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WorldCupCountdownEntryView(entry: entry)
         }
-        .configurationDisplayName("Qatar WorldCup Countdown Widgets")
-        .description("Select from your country's flags, favorite players to setup widgets for upcoming WorldCup!.")
+        .configurationDisplayName("Countdown to Qatar 2022 - Widgets")
+        .description("Select from your country's flags, favorite players to setup widgets for upcoming Qatar 2022 event.")
         .supportedFamilies(supportedFamilies)
     }
 }
