@@ -1,8 +1,5 @@
 # WorldCup-2022-Countdown-Widgets
 
-## This app supposed to go to AppStore but Apple rejected it with below reasoning - 
-Guideline 5.2.1 - Legal - Intellectual Property
-
 I am sharing this app with you all, it has nice widgets, lockscreen widgets and nice reminder to the worldcup.
 
 WorldCup 2022 Countdown Widget is a free (and ad-free) app. See the remaining days of World Cup Qatar 2022 on your home screen with beautiful and eye-catching widgets.
