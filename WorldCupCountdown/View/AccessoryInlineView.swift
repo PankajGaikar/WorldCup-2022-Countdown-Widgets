@@ -10,7 +10,7 @@ import SwiftUI
 struct AccessoryInlineView: View {
     var body: some View {
         HStack {
-            Text("WorldCup in \(WorldCupViewModel.getDate()!, style: .relative)")
+            Text("Qatar 2022 in \(WorldCupViewModel.getDate()!, style: .relative)")
                 .lineLimit(1)
                 .minimumScaleFactor(0.1)
                 .font(.caption)
