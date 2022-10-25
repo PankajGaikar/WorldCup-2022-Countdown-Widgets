@@ -15,13 +15,15 @@ Make your phone look amazing with widget backgrounds of country flags, and playe
 Download this free app now and follow your team!
 
 # Images -
-## Dark Mode -
+## iPhone Screens -
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iphone-1.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iphone-2.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-3.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-4.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-5.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPhone-6.png)
+
+## iPad Screens -
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-1.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-2.png)
 ![alt tag](https://github.com/PankajGaikar/WorldCup-2022-Countdown-Widgets/blob/main/Screenshots/iPad-3.png)
