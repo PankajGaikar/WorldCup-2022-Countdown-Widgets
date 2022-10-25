@@ -13,6 +13,8 @@ struct CustomWidgetButton: View {
     @State var isImagePickerViewPresented = false
     @State private var showImageCropper = false
     @State var imagePicked: UIImage?
+    @State var alertIsPresented: Bool = false
+    @State var text: String? // this is updated as the user types in the text field
 
     var body: some View {
         VStack {
@@ -50,8 +52,11 @@ struct CustomWidgetButton: View {
         .frame(width: getWidth())
         .contentShape(Rectangle())
         .onTapGesture {
-            isImagePickerViewPresented = true
+            alertIsPresented = true
         }
+        .onChange(of: text, perform: { newValue in
+            isImagePickerViewPresented = true
+        })
         .sheet(isPresented: $isImagePickerViewPresented) {
             // filter default is .images; please DO NOT CHOOSE .videos
             // selectionLimit default is 1; set to 0 to have unlimited selection
@@ -75,6 +80,9 @@ struct CustomWidgetButton: View {
             ImageCropViewController(onImageCropped: { image in
 
             }, image: $imagePicked, viewerShown: $showImageCropper)
+        }
+        .textFieldAlert(isPresented: $alertIsPresented) { () -> TextFieldAlert in
+            TextFieldAlert(title: "Alert Title", message: "Alert Message", text: self.$text)
         }
     }
 
