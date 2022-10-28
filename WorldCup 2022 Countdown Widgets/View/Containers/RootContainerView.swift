@@ -21,7 +21,7 @@ struct RootContainerView: View {
                     } else {
                         CountdownHeaderView_iPhone()
                     }
-                    //SignatureWidgetHorizontalView()
+                    SignatureWidgetHorizontalView()
                     PlayersHorizontalView()
                     CountriesHorizontalView()
                     AppInfoView()
